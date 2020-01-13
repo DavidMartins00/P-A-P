@@ -16,3 +16,13 @@ Auth::routes();
 Route::get('/', 'SiteController@index');
 Route::get('/a', 'SiteController@crude');
 Route::get('/m', 'SiteController@menu');
+Route::resource('user','UserController');
+/*
+Route::group(['middleware' => ['auth']],function(){
+    Route::resource('Post','PostController');
+    Route::get('/meusposts','PostController@indexp');
+  });
+  
+  Route::get('/showg/{id}','PostController@showg');
+  
+*/

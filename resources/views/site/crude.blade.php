@@ -4,7 +4,7 @@
     <br>
 <div class="centercr">
     <center>  
-            <form class="form-horizontal" action="{{route('categorias.store')}}" method="post">
+            <form class="form-horizontal" action="{{route('user.store')}}" method="post">
               @csrf
                 <fieldset>
                 

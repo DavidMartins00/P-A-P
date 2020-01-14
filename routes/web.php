@@ -16,6 +16,7 @@ Auth::routes();
 Route::get('/', 'SiteController@index');
 Route::get('/a', 'SiteController@crude');
 Route::get('/m', 'SiteController@menu');
+Route::get('/l', 'UserController@index');
 Route::resource('user','UserController');
 /*
 Route::group(['middleware' => ['auth']],function(){

@@ -59,7 +59,14 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findorfail($id);
+         if($id == auth()->user()->id){
+
+         return View("user/edit")->with(compact('user'));
+         }
+         else {
+            return redirect('/l');
+         }
     }
 
     /**

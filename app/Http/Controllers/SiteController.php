@@ -12,11 +12,15 @@ class SiteController extends Controller
       return view('site/index');
   }
   
-  public function crude(){
-    return view('site/crude');
+  public function add(){
+    return view('user/register');
   }
 
   public function menu(){
     return view('site/menu');
+  }
+
+  public function login(){
+    return view('user/login');
   }
 }

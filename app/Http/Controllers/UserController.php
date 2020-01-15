@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -60,13 +61,13 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::findorfail($id);
-         if($id == auth()->user()->id){
+         //if($id == auth()->user()->id){
 
          return View("user/edit")->with(compact('user'));
-         }
-         else {
-            return redirect('/l');
-         }
+         
+         //else {
+          //  return redirect('/l');
+         
     }
 
     /**
@@ -78,8 +79,25 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $request->validate([
+        'name' => 'required', 'string', 'max:255',
+        'email' => 'required', 'string', 'email', 'max:255', 'unique:users',
+        'nivel' => 'required', 'string',
+        'password' => 'required', 'string', 'min:8',
+        ]);
+
+        User::where(['id'=>$id])->update([
+        'name'=>$data['name'],
+        'email'=>$data['email'],
+        'nivel'=>$data['nivel'],
+        'password'=>Hash::make($data['password']),
+      ]);
+
+      return Redirect('/l')->with('fm_success','Utilizador alterado com sucesso!!');
     }
+    
+    
 
     /**
      * Remove the specified resource from storage.

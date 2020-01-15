@@ -1,7 +1,7 @@
 @extends('layouts/app')
 @section('content') 
 
-<div class="fs" style="background-color:#008000">
+<div class="fs">
     <br>
     <center>                  
     @forelse ($users as $user)

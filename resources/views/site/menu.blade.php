@@ -1,27 +1,22 @@
 @extends('layouts/app')
 @section('content') 
-<div class="fs" style="background-color:#008000">
+<div class="fs">
     <br>
 <div class="centercr">
     <center>                  
             <!-- Form Name -->
-            <legend>User</legend>
+            <legend style="color:#2C2F33">User</legend>
                 
 
             <!-- Butao adicionar-->
             <div class="container">
-                <a class="btn btn-outline-primary" href="/l">Listar</a>
+                <a class="btn btn-outline-secondary btm" href="/l">Listar</a>
             </div>
             <br>
             <!-- Butao adicionar-->
             <div class="container">
-                <a class="btn btn-outline-success" href="/a">Adicionar</a>
-            </div>
-            <br>
-            <!-- Text input-->
-            <div class="container">
-                <a class="btn btn-outline-warning" href="/e">Editar</a>
-            </div>              
+                <a class="btn btn-outline-success btm" href="/a">Adicionar</a>
+            </div>           
      </center>
      
 </div>

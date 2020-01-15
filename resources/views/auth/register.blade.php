@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Nivel') }}</label>
+                            <label for="nivel" class="col-md-4 col-form-label text-md-right">{{ __('Nivel') }}</label>
 
                             <div class="col-md-6">
                                 <input id="nivel" type="text" class="form-control" name="nivel" required>

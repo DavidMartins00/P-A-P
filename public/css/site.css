@@ -34,10 +34,11 @@
   margin: auto;
   width: 50%;
   padding: 10px;
-  border: 3px solid green;
+  border: 3px solid #F2E2CE;
   text-align: center;
   background-color:white;
   border-radius: 15px;
+  background-color:#D98943;
 }
 
 .fs{
@@ -45,4 +46,33 @@
   width: 100%; 
   height: 100%;
   left: 0;
+  background-color:#F2E2CE;
 }
+
+.btm{
+  width:100px;
+  color:white;
+}
+
+
+
+/* Color Theme Swatches in Hex */
+.Deadvlei,-Namibia-1-hex { color: #035AA6; }
+.Deadvlei,-Namibia-2-hex { color: #0477BF; }
+.Deadvlei,-Namibia-3-hex { color: #049DD9; }
+.Deadvlei,-Namibia-4-hex { color: #F2E2CE; }
+.Deadvlei,-Namibia-5-hex { color: #D98943; }
+
+/* Color Theme Swatches in RGBA */
+.Deadvlei,-Namibia-1-rgba { color: rgba(3, 89, 165, 1); }
+.Deadvlei,-Namibia-2-rgba { color: rgba(3, 119, 191, 1); }
+.Deadvlei,-Namibia-3-rgba { color: rgba(4, 156, 216, 1); }
+.Deadvlei,-Namibia-4-rgba { color: rgba(242, 225, 205, 1); }
+.Deadvlei,-Namibia-5-rgba { color: rgba(216, 136, 67, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Deadvlei,-Namibia-1-hsla { color: hsla(208, 96, 33, 1); }
+.Deadvlei,-Namibia-2-hsla { color: hsla(202, 96, 38, 1); }
+.Deadvlei,-Namibia-3-hsla { color: hsla(196, 96, 43, 1); }
+.Deadvlei,-Namibia-4-hsla { color: hsla(33, 58, 87, 1); }
+.Deadvlei,-Namibia-5-hsla { color: hsla(28, 66, 55, 1); }

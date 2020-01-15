@@ -1,11 +1,12 @@
 @extends('layouts/app')
 @section('content') 
-<div class="fs" style="background-color:#008000">
+<div class="fs">
     <br>
 <div class="centercr">
     <center>  
-            <form class="form-horizontal" action="{{route('user.store')}}" method="post">
+            <form class="form-horizontal" action="/user/{{$user->id}}" method="post">
               @csrf
+              @method('put')
                 <fieldset>
                 
                 <!-- Form Name -->
@@ -15,7 +16,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Nome</label>  
                   <div class="col-md-4">
-                  <input id="nome" name="nome" type="text" class="form-control input-md" value="{{$user->name}}">
+                  <input id="name" name="name" type="text" class="form-control input-md" value="{{$user->name}}">
                   </div>
                 </div>
 
@@ -31,7 +32,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="passwordinput">Senha</label>
                   <div class="col-md-4">
-                    <input id="senha" name="senha" type="password" class="form-control input-md">
+                    <input id="password" name="password" type="password" class="form-control input-md">
                   </div>
                 </div>
                 

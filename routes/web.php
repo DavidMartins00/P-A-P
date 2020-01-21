@@ -15,16 +15,14 @@ Auth::routes();
 
 Route::get('/', 'SiteController@index');
 Route::get('/home', 'SiteController@index');
-Route::get('/a', 'SiteController@add');
-Route::get('/m', 'SiteController@menu');
-Route::get('/l', 'UserController@index');
-Route::resource('user','UserController');
-/*
+
+
 Route::group(['middleware' => ['auth']],function(){
-    Route::resource('Post','PostController');
-    Route::get('/meusposts','PostController@indexp');
-  });
+    Route::group(['middleware' => ['admin']],function(){
+        Route::get('/a', 'SiteController@add');
+        Route::get('/m', 'SiteController@menu');
+        Route::get('/l', 'UserController@index');
+        Route::resource('user','UserController');
+    }); 
+});
   
-  Route::get('/showg/{id}','PostController@showg');
-  
-*/

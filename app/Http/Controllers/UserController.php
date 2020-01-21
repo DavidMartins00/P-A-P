@@ -84,7 +84,7 @@ class UserController extends Controller
         'name' => 'required', 'string', 'max:255',
         'email' => 'required', 'string', 'email', 'max:255', 'unique:users',
         'nivel' => 'required', 'string',
-        'password' => 'required', 'string', 'min:8',
+        'password' =>'sometimes','string',
         ]);
 
         User::where(['id'=>$id])->update([

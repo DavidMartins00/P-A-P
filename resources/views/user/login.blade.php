@@ -4,7 +4,7 @@
     <br>
 <div class="centercr">
     <center>  
-            <form class="form-horizontal" action="{{ route('login') }}" method="post">
+            <form class="form-horizontal" method="POST" action="{{ route('login') }}">
               @csrf
                 <fieldset>
                 
@@ -13,9 +13,15 @@
                
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Nome</label>  
+                  <label class="col-md-4 control-label" for="textinput">ID</label>  
                   <div class="col-md-4">
-                  <input id="email" name="email" type="text" class="form-control input-md @error('nome') is-invalid @enderror">
+                    <input id="id" class="form-control @error('id') is-invalid @enderror" name="id" value="{{ old('id') }}" required autocomplete="id" autofocus>
+                    
+                    @error('id')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                     @enderror
                   </div>
                 </div>
 
@@ -23,7 +29,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="passwordinput">Senha</label>
                   <div class="col-md-4">
-                    <input id="password" name="password" type="password" class="form-control input-md @error('password') is-invalid @enderror">
+                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                   </div>
                 </div>
                 

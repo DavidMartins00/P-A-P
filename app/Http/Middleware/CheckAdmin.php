@@ -17,7 +17,6 @@ class CheckAdmin
     public function handle($request, Closure $next)
     {
         $userRoles = Auth::User()->roles->pluck('name');
-        dd($userRoles);
         if (!$userRoles->contains('admin')) {
             return redirect('/home');
         }

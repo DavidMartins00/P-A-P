@@ -22,7 +22,9 @@ Route::group(['middleware' => ['auth']],function(){
         Route::get('/a', 'SiteController@add');
         Route::get('/m', 'SiteController@menu');
         Route::get('/l', 'UserController@index');
+        Route::get('/ll', 'UtenteController@index');
         Route::resource('user','UserController');
+        Route::resource('utente','UtenteController');
     }); 
 });
 

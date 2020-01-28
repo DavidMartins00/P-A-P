@@ -4,7 +4,7 @@
     <br>
 <div class="centercr">
     <center>  
-            <form class="form-horizontal" action="{{ route('register') }}" method="post">
+            <form class="form-horizontal" action="{{ route('utente.store') }}" method="post">
               @csrf
                 <fieldset>
                 
@@ -15,62 +15,73 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Nome</label>  
                   <div class="col-md-4">
-                  <input id="name" name="name" type="text" class="form-control input-md @error('name') is-invalid @enderror">
+                  <input id="nome" name="nome" type="text" class="form-control input-md @error('name') is-invalid @enderror">
                   </div>
                 </div>
-                    @error('name')
+                    @error('nome')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                      @enderror
+                <!-------------------->
 
-                <!-- Email input-->
+                <!-- Nome input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Email</label>  
+                  <label class="col-md-4 control-label" for="textinput">Data Nascimento</label>  
                   <div class="col-md-4">
-                  <input id="email" name="email" type="text" class="form-control input-md @error('email') is-invalid @enderror">
+                  <input id="dtNasc" name="dtNasc" type="date" class="form-control input-md @error('name') is-invalid @enderror">
                   </div>
                 </div>
-                    @error('email')
+                    @error('dtNasc')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                      @enderror
+                <!-------------------->
+
+                <!-- Nome input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="textinput">Morada</label>  
+                  <div class="col-md-4">
+                  <input id="morada" name="morada" type="text" class="form-control input-md @error('name') is-invalid @enderror">
+                  </div>
+                </div>
+                    @error('morada')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                     @enderror
+                <!-------------------->
+
+                <!-- Nome input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="textinput">Codigo Postal</label>  
+                  <div class="col-md-4">
+                  <input id="codPost" name="codPost" type="text" class="form-control input-md @error('name') is-invalid @enderror">
+                  </div>
+                </div>
+                    @error('codPost')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                     @enderror
+                <!-------------------->
+
+                <!-- Nome input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="textinput">Contactos</label>  
+                  <div class="col-md-4">
+                  <input id="contactos" name="contactos" type="text" class="form-control input-md @error('name') is-invalid @enderror">
+                  </div>
+                </div>
+                    @error('contactos')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                     @enderror
+                <!-------------------->
+
                 
-                <!-- Password input-->
-                <div class="form-group">
-                  <label class="col-md-4 control-label" for="passwordinput">Senha</label>
-                  <div class="col-md-4">
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-                  </div>
-                </div>
-                @error('password')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                     @enderror
-
-                <div class="form-group">
-                  <label for="password-confirm" class="col-md-4 control-label">Confirmar Senha</label>
-                  <div class="col-md-4">
-                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                  </div>
-                </div>
-                @error('password-confirm')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                     @enderror
-                
-
-                <!-- Text input-->
-                <div class="form-group">
-                <select name="nivel">
-                  <option value="2">User</option>
-                  <option value="1">Admin</option>
-                </select>
-              </div>
-              
                 <div class="form-group">
                   <button type="submit" class="btn btn-outline-dark">Registar</button>      
                 </div>                

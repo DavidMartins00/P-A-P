@@ -26,7 +26,7 @@ class UtenteController extends Controller
      */
     public function create()
     {
-        return View("utente.create");
+        return view("utente.create");
     }
 
     /**
@@ -38,20 +38,20 @@ class UtenteController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'Nome' => 'required|max:255',
-            'DtNasc' => 'required',
-            'Morada' => 'required',
-            'CodPost' => 'required',
-            'Contactos' => 'required',
+            'nome' => 'required|max:255',
+            'dtNasc' => 'required',
+            'morada' => 'required',
+            'codPost' => 'required',
+            'contactos' => 'required',
           ]);
       
           $data = $request->all();
           $utt = new Utente();
-          $utt->Nome = $data['Nome'];
-          $utt->DtNasc = $data['DtNasc'];
-          $utt->Morada = $data['Morada'];
-          $utt->CodPost = $data['CodPost'];
-          $utt->Contactos = $data['Contactos'];
+          $utt->Nome = $data['nome'];
+          $utt->DtNasc = $data['dtNasc'];
+          $utt->Morada = $data['morada'];
+          $utt->CodPost = $data['codPost'];
+          $utt->Contactos = $data['contactos'];
       
           $utt->save();
           return Redirect('/')->with('fm_success','Utente adicionado com sucesso!!');

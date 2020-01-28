@@ -16,10 +16,10 @@ Auth::routes();
 Route::get('/', 'SiteController@index');
 Route::get('/home', 'SiteController@index');
 
-
+Route::get('/a', 'SiteController@add');
 Route::group(['middleware' => ['auth']],function(){
     Route::group(['middleware' => ['admin']],function(){
-        Route::get('/a', 'SiteController@add');
+        
         Route::get('/m', 'SiteController@menu');
         Route::get('/l', 'UserController@index');
         Route::get('/ll', 'UtenteController@index');

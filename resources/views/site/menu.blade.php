@@ -35,7 +35,7 @@
             <br>
             <!-- Butao adicionar-->
             <div class="container">
-                <a class="btn btn-outline-success btm" href="/a">Adicionar</a>
+                <a class="btn btn-outline-success btm" href="{{ route('utente.create') }}">Adicionar</a>
             </div>
      </center>
      

@@ -65,7 +65,7 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                <select name="nivel">
+                <select name="nivel" id="nivel">
                   <option value="2">User</option>
                   <option value="1">Admin</option>
                 </select>

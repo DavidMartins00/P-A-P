@@ -25,6 +25,8 @@ Route::group(['middleware' => ['auth']],function(){
         Route::get('/ll', 'UtenteController@index');
         Route::resource('user','UserController');
         Route::resource('utente','UtenteController');
+        Route::resource('medica','MedicamentosController');
+        
     }); 
 });
 

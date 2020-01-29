@@ -83,7 +83,7 @@
 
                 
                 <div class="form-group">
-                  <button type="submit" class="btn btn-outline-dark">Registar</button>      
+                  <button type="submit" class="btn btn-outline-dark">Adicionar</button>      
                 </div>                
                 </fieldset>
             </form>

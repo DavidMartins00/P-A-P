@@ -15,7 +15,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Nome</label>  
                   <div class="col-md-4">
-                  <input id="nome" name="nome" type="text" class="form-control input-md @error('name') is-invalid @enderror">
+                  <input id="nome" name="nome" type="text" class="form-control input-md @error('nome') is-invalid @enderror">
                   </div>
                 </div>
                     @error('nome')

@@ -60,6 +60,26 @@
      
 </div>
 
+<br>
+<div class="centercr">
+    <center>                
+            <!-- Form Name -->
+            <legend style="color:#2C2F33">Serviços</legend>
+                
+
+            <!-- Butao adicionar-->
+            <div class="container">
+                <a class="btn btn-outline-secondary btm" href="{{ route('servico.index') }}">Listar</a>
+            </div>
+            <br>
+            <!-- Butao adicionar-->
+            <div class="container">
+                <a class="btn btn-outline-success btm" href="{{ route('servico.create') }}">Adicionar</a>
+            </div>
+     </center>
+     
+</div>
+
 </div>
 
 @endsection

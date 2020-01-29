@@ -15,7 +15,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Nome</label>  
                   <div class="col-md-4">
-                  <input id="nome" name="nome" type="text" class="form-control input-md @error('name') is-invalid @enderror">
+                  <input id="nome" name="nome" type="text" class="form-control input-md @error('nome') is-invalid @enderror">
                   </div>
                 </div>
                     @error('nome')
@@ -29,7 +29,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Data Nascimento</label>  
                   <div class="col-md-4">
-                  <input id="dtNasc" name="dtNasc" type="date" class="form-control input-md @error('name') is-invalid @enderror">
+                  <input id="dtNasc" name="dtNasc" type="date" class="form-control input-md @error('dtNasc') is-invalid @enderror">
                   </div>
                 </div>
                     @error('dtNasc')
@@ -43,7 +43,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Morada</label>  
                   <div class="col-md-4">
-                  <input id="morada" name="morada" type="text" class="form-control input-md @error('name') is-invalid @enderror">
+                  <input id="morada" name="morada" type="text" class="form-control input-md @error('morada') is-invalid @enderror">
                   </div>
                 </div>
                     @error('morada')
@@ -57,7 +57,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Codigo Postal</label>  
                   <div class="col-md-4">
-                  <input id="codPost" name="codPost" type="text" class="form-control input-md @error('name') is-invalid @enderror">
+                  <input id="codPost" name="codPost" type="text" class="form-control input-md @error('codPost') is-invalid @enderror">
                   </div>
                 </div>
                     @error('codPost')
@@ -71,7 +71,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Contactos</label>  
                   <div class="col-md-4">
-                  <input id="contactos" name="contactos" type="text" class="form-control input-md @error('name') is-invalid @enderror">
+                  <input id="contactos" name="contactos" type="text" class="form-control input-md @error('contactos') is-invalid @enderror">
                   </div>
                 </div>
                     @error('contactos')

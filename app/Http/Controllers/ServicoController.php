@@ -46,6 +46,7 @@ class ServicoController extends Controller
           $serv = new Servico();
           $serv->servico = $data['nome'];
           $serv->categoria = $data['catg']; 
+          dd($data);
           $serv->save();
           return Redirect('/')->with('fm_success','Serviço adicionado com sucesso!!');
     }

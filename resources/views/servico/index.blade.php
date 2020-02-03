@@ -4,16 +4,17 @@
 <div class="fs">
     <br>
     <center>                  
-    @forelse ($medica as $med)
+    @forelse ($servico as $ser)
         <div class="centercr">     
-            <p>Id: {{$med->id}}</p>
-            <p>Nome: {{$med->nome}}</p>
+            <p>Id: {{$ser->id}}</p>
+            <p>Serviço: {{$ser->servico}}</p>
+            <p>Categoria: {{$ser->categoria}}</p>
             <div class="row">
                 <div class="col">
-                    <a href="/medica/{{$med->id}}/edit" style="margin:1px" class="btn btn-outline-warning">Editar</a>
+                    <a href="/servico/{{$ser->id}}/edit" style="margin:1px" class="btn btn-outline-warning">Editar</a>
                 </div>
                 <div class="col">
-                    <form class="" action="/medica/{{$med->id}}" style="margin:1px" method="post">
+                    <form class="" action="/servico/{{$ser->id}}" style="margin:1px" method="post">
                         @csrf
                         @method('delete')
                         <input type="submit" class="btn btn-outline-danger" value="Apagar">

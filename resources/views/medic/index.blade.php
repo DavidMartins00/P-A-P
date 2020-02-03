@@ -4,7 +4,7 @@
 <div class="fs">
     <br>
     <center>                  
-    @forelse ($servico as $med)
+    @forelse ($medica as $med)
         <div class="centercr">     
             <p>Id: {{$med->id}}</p>
             <p>Nome: {{$med->nome}}</p>

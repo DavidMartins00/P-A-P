@@ -45,7 +45,7 @@ class MedicamentosController extends Controller
           $med = new Medicamentos();
           $med->Nome = $data['nome']; 
           $med->save();
-          return Redirect('/')->with('fm_success','Medicamento adicionado com sucesso!!');
+          return Redirect('/medica')->with('fm_success','Medicamento adicionado com sucesso!!');
     }
 
     /**
@@ -89,7 +89,7 @@ class MedicamentosController extends Controller
         'nome'=>$data['nome'],
       ]);
 
-      return Redirect('/l')->with('fm_success','Medicamento alterado com sucesso!!');
+      return Redirect('/medica')->with('fm_success','Medicamento alterado com sucesso!!');
     }
 
     /**
@@ -101,6 +101,6 @@ class MedicamentosController extends Controller
     public function destroy($id)
     {
         Medicamentos::where(['id'=>$id])->delete();
-        return Redirect('/l')->with('fm_success','Medicamento eliminado com sucesso');
+        return Redirect('/medica')->with('fm_success','Medicamento eliminado com sucesso');
     }
 }

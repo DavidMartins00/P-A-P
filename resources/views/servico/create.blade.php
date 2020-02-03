@@ -4,7 +4,7 @@
     <br>
 <div class="centercr">
     <center>  
-            <form class="form-horizontal" action="{{ route('serv.store') }}" method="post">
+            <form class="form-horizontal" action="{{ route('servico.store') }}" method="post">
               @csrf
                 <fieldset>
                 

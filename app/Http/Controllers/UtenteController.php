@@ -54,7 +54,7 @@ class UtenteController extends Controller
           $utt->Contactos = $data['contactos'];
       
           $utt->save();
-          return Redirect('/')->with('fm_success','Utente adicionado com sucesso!!');
+          return Redirect('/utente')->with('fm_success','Utente adicionado com sucesso!!');
     }
 
     /**
@@ -100,6 +100,6 @@ class UtenteController extends Controller
     public function destroy($id)
     {
         Utente::where(['Id'=>$id])->delete();
-        return Redirect('/ll')->with('fm_success','Utente eliminado com sucesso');
+        return Redirect('/utente')->with('fm_success','Utente eliminado com sucesso');
     }
 }

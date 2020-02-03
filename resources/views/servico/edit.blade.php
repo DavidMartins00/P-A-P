@@ -16,7 +16,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Serviço</label>  
                   <div class="col-md-4">
-                  <input id="servico" name="servico" type="text" class="form-control input-md" value="{{$serv->nome}}">
+                  <input id="servico" name="servico" type="text" class="form-control input-md" value="{{$serv->servico}}">
                   </div>
 
                 <br>
@@ -25,7 +25,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Categorias</label>  
                   <div class="col-md-4">
-                  <input id="catg" name="catg" type="text" class="form-control input-md" value="{{$serv->nome}}">
+                  <input id="catg" name="catg" type="text" class="form-control input-md" value="{{$serv->categoria}}">
                   </div>
 
                 <br>

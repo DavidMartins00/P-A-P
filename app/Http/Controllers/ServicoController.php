@@ -14,7 +14,7 @@ class ServicoController extends Controller
      */
     public function index()
     {
-        return view('medic.index',[
+        return view('servico.index',[
             'servico' => Servico::orderBy('id')->paginate(10)
         ]);
     }
@@ -38,17 +38,16 @@ class ServicoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'servico' => 'required|max:255',
-            'categoria' => 'required|max:255',
+            'servico' => 'required',
+            'catg' => 'required',
           ]);
       
           $data = $request->all();
-          $serv = new Servico();
-          $serv->servico = $data['nome'];
-          $serv->categoria = $data['catg']; 
-          dd($data);
+          $serv = new Servico();    
+          $serv->servico = $data['servico'];
+          $serv->categoria = $data['catg'];
           $serv->save();
-          return Redirect('/')->with('fm_success','Serviço adicionado com sucesso!!');
+          return Redirect('/servico')->with('fm_success','Serviço adicionado com sucesso!!');
     }
 
     /**
@@ -86,7 +85,7 @@ class ServicoController extends Controller
         $data = $request->all();
         $request->validate([
         'servico' => 'required', 'string', 'max:255',
-        'categoria' => 'required', 'string', 'max:255',
+        'catg' => 'required', 'string', 'max:255',
         ]);
 
         Servico::where(['id'=>$id])->update([
@@ -94,7 +93,7 @@ class ServicoController extends Controller
         'categoria'=>$data['catg'],
       ]);
 
-      return Redirect('/l')->with('fm_success','Serviço alterado com sucesso!!');
+      return Redirect('/servico')->with('fm_success','Serviço alterado com sucesso!!');
     }
 
     /**
@@ -106,6 +105,6 @@ class ServicoController extends Controller
     public function destroy($id)
     {
         Servico::where(['id'=>$id])->delete();
-        return Redirect('/l')->with('fm_success','Serviço eliminado com sucesso');
+        return Redirect('/servico')->with('fm_success','Serviço eliminado com sucesso');
     }
 }

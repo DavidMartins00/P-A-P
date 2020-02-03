@@ -88,7 +88,7 @@ class UserController extends Controller
         'password'=>Hash::make($data['password']),
       ]);
 
-      return Redirect('/l')->with('fm_success','Utilizador alterado com sucesso!!');
+      return Redirect('/user')->with('fm_success','Utilizador alterado com sucesso!!');
     }
     
     
@@ -102,6 +102,6 @@ class UserController extends Controller
     public function destroy($id)
     {
         User::where(['id'=>$id])->delete();
-        return Redirect('/l')->with('fm_success','Utilizador eliminado com sucesso');
+        return Redirect('/user')->with('fm_success','Utilizador eliminado com sucesso');
     }
 }

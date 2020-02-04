@@ -56,6 +56,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string'],
             'nivel' => ['required', 'int'],
+            'id' => ['required', 'int'],
         ]);
     }
 
@@ -68,17 +69,15 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        $urs = User::create([
+        User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
                 ]);
         
-        role_user::create([
+        return role_user::create([
             'user_id' => $data['id'],
             'role_id'=> $data['nivel'],
             ]);
-        
-        return $urs;
     }
 }

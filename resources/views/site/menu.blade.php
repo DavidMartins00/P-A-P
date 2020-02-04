@@ -10,12 +10,12 @@
 
             <!-- Butao adicionar-->
             <div class="container">
-                <a class="btn btn-outline-secondary btm" href="/l">Listar</a>
+                <a class="btn btn-outline-secondary btm" href="/user">Listar</a>
             </div>
             <br>
             <!-- Butao adicionar-->
             <div class="container">
-                <a class="btn btn-outline-success btm" href="/a">Adicionar</a>
+                <a class="btn btn-outline-success btm" href="{{ route('user.create') }}">Adicionar</a>
             </div>
      </center>
      
@@ -49,7 +49,7 @@
 
             <!-- Butao adicionar-->
             <div class="container">
-                <a class="btn btn-outline-secondary btm" href="{{ route('medica.index') }}">Listar</a>
+                <a class="btn btn-outline-secondary btm" href="/medica">Listar</a>
             </div>
             <br>
             <!-- Butao adicionar-->

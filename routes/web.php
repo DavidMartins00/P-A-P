@@ -18,7 +18,7 @@ Route::get('/home', 'SiteController@index');
 
 Route::get('/a', 'SiteController@add');
 Route::group(['middleware' => ['auth']],function(){
-    Route::group(['middleware' => ['admin']],function(){
+    Route::group(['middleware' => ['is_admin']],function(){
         
         Route::get('/m', 'SiteController@menu');
         Route::get('/l', 'UserController@index');

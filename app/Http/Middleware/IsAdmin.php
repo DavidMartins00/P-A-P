@@ -3,9 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Support\Facades\Auth;
 
-class CheckAdmin
+class IsAdmin
 {
     /**
      * Handle an incoming request.
@@ -16,10 +15,9 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        $userRoles = Auth::User()->roles->pluck('name');
-        if (!$userRoles->contains('admin')) {
-            return redirect('/home');
+        if(auth()->user()->isAdmin()) {
+            return $next($request);
         }
-        return $next($request);
+        return redirect('home');
     }
 }

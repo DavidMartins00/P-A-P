@@ -63,14 +63,7 @@
                      @enderror
                 
 
-                <!-- Text input-->
-                <div class="form-group">
-                <select name="nivel" id="nivel">
-                  <option value="2">User</option>
-                  <option value="1">Admin</option>
-                </select>
-              </div>
-              
+                
                 <div class="form-group">
                   <button type="submit" class="btn btn-outline-dark">Registar</button>      
                 </div>                

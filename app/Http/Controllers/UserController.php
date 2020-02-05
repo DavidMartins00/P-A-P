@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\role_user;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Hash;
@@ -77,15 +78,15 @@ class UserController extends Controller
         $request->validate([
         'name' => 'required', 'string', 'max:255',
         'email' => 'required', 'string', 'email', 'max:255', 'unique:users',
-        'nivel' => 'required', 'string',
         'password' =>'sometimes','string',
+        'type' =>'sometimes','string',
         ]);
-
+           
         User::where(['id'=>$id])->update([
         'name'=>$data['name'],
         'email'=>$data['email'],
-        'nivel'=>$data['nivel'],
         'password'=>Hash::make($data['password']),
+        'type'=>$data['type'],
       ]);
 
       return Redirect('/user')->with('fm_success','Utilizador alterado com sucesso!!');

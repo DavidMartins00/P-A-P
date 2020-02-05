@@ -36,13 +36,22 @@
                   </div>
                 </div>
                 
-                <!-- Text input-->
+                <!-- Nivel input-->
+
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Nivel</label>  
+                  <label class="col-md-4 control-label" for="type">Tipo de conta</label>
                   <div class="col-md-4">
-                  <input id="nivel" name="nivel" type="text" class="form-control input-md" value="{{$user->nivel}}">
+                    <select class="custom-select" name="type" id="type">
+                      <option value="default">User</option>
+                      <option value="admin">Admin</option>
+                    </select>
                   </div>
                 </div>
+
+                <div class="form-group">
+                  
+                </div>                
+
                 <div class="form-group">
                   <button type="submit" id="add" name="add" class="btn btn-outline-dark" >Submeter</button>
                   </div>                

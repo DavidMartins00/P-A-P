@@ -4,21 +4,18 @@
 <div class="fs">
     <br>
     <center>                  
-    @forelse ($Utente as $utt)
         <div class="centercr">     
-            <p>Id: {{$utt->Id}}</p>
-            <p>Nome: {{$utt->Nome}}</p>
+            <h3>Nome: {{$utn->Nome}}</h3>
+        <p>Data de Nascimento: {{$utn->DtNasc}}</p>
+        <p>Morada: {{$utn->Morada}}</p>
+        <p>Codigo Postal: {{$utn->CodPost}}</p>
+        <p>Contactos: {{$utn->Contactos}}</p>
             <div class="row">
                 <div class="col">
-                    <a href="/utente/{{$utt->Id}}/edit" style="margin:1px" class="btn btn-outline-warning">Editar</a>
+                    <a href="/utente" style="margin:1px" class="btn btn-outline-dark">Voltar</a>
                 </div>
             </div>
         </div>
-    @empty
-        <tr>
-            <div class="centercr">Lista Vazia</div>
-        </tr>
-    @endforelse
     </center>
 <br>
 </div>

@@ -4,45 +4,54 @@
     <br>
 <div class="centercr">
     <center>  
-            <form class="form-horizontal" action="/user/{{$user->id}}" method="post">
+            <form class="form-horizontal" action="/utente/{{$utt->Id}}" method="post">
               @csrf
               @method('put')
                 <fieldset>
                 
                 <!-- Form Name -->
-                <legend>Adicionar</legend>
+                <legend>Editar</legend>
                
                 <!-- Text input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Nome</label>  
                   <div class="col-md-4">
-                  <input id="name" name="name" type="text" class="form-control input-md" value="{{$user->name}}">
+                  <input id="Nome" name="Nome" type="text" class="form-control input-md" value="{{$utt->Nome}}">
+                  </div>
+                </div>
+                
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="textinput">Data de Nascimento</label>
+                  <div class="col-md-4">
+                  <input id="DtNasc" name="DtNasc" type="date" class="form-control input-md" value="{{$utt->DtNasc}}">
                   </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Email</label>  
+                  <label class="col-md-4 control-label" for="textinput">Morada</label>  
                   <div class="col-md-4">
-                  <input id="email" name="email" type="text" class="form-control input-md" value="{{$user->email}}">
+                  <input id="Morada" name="Morada" type="text" class="form-control input-md" value="{{$utt->Morada}}">
                   </div>
                 </div>
-                
-                <!-- Password input-->
-                <div class="form-group">
-                  <label class="col-md-4 control-label" for="passwordinput">Senha</label>
-                  <div class="col-md-4">
-                    <input id="password" name="password" type="password" class="form-control input-md">
-                  </div>
-                </div>
-                
+
                 <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Nivel</label>  
+                  <label class="col-md-4 control-label" for="textinput">Codigo Postal</label>  
                   <div class="col-md-4">
-                  <input id="nivel" name="nivel" type="text" class="form-control input-md" value="{{$user->nivel}}">
+                  <input id="CodPost" name="CodPost" type="text" class="form-control input-md" value="{{$utt->CodPost}}">
                   </div>
                 </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="textinput">Contactos</label>  
+                  <div class="col-md-4">
+                  <input id="Contactos" name="Contactos" type="text" class="form-control input-md" value="{{$utt->Contactos}}">
+                  </div>
+                </div>
+
                 <div class="form-group">
                   <button type="submit" id="add" name="add" class="btn btn-outline-dark" >Submeter</button>
                   </div>                

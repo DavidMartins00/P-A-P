@@ -53,7 +53,7 @@
                         <!-- Butao admin -->
                         @if ( auth()->user()->isAdmin() )
                         <a class="btn" href="/m">
-                            <img src="{{ asset('img/admin.png') }}" alt="">
+                            <img src="{{ asset('img/admin.png') }}" alt="Menu Admin">
                         </a>
                         @endif
 

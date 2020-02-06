@@ -12,18 +12,6 @@
                 <div class="col">
                     <a href="/utente/{{$utt->Id}}/edit" style="margin:1px" class="btn btn-outline-warning">Editar</a>
                 </div>
-
-                <div class="col">
-                    <a href="/utente/{{$utt->Id}}" style="margin:1px" class="btn btn-outline-light">Mostrar</a>
-                </div>
-
-                <div class="col">
-                    <form class="" action="/utente/{{$utt->Id}}" style="margin:1px" method="post">
-                        @csrf
-                        @method('delete')
-                        <input type="submit" name="" class="btn btn-outline-danger" value="Apagar">
-                      </form>
-                </div>
             </div>
         </div>
     @empty

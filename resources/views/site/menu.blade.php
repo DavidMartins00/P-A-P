@@ -30,7 +30,7 @@
 
             <!-- Butao adicionar-->
             <div class="container">
-                <a class="btn btn-outline-secondary btm" href="/ll">Listar</a>
+                <a class="btn btn-outline-secondary btm" href="/utente">Listar</a>
             </div>
             <br>
             <!-- Butao adicionar-->

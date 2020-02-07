@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Visita;
 use Illuminate\Http\Request;
 
 class VisitaController extends Controller
@@ -13,7 +14,9 @@ class VisitaController extends Controller
      */
     public function index()
     {
-        //
+        return view('visita.index',[
+            'visita' => Visita::orderBy('id')->paginate(10)
+        ]);
     }
 
     /**
@@ -23,7 +26,7 @@ class VisitaController extends Controller
      */
     public function create()
     {
-        //
+        return view("visita.create");
     }
 
     /**
@@ -45,7 +48,8 @@ class VisitaController extends Controller
      */
     public function show($id)
     {
-        //
+        $utn = Visita::find($id);
+         return view('visita.show')->with(compact('utn'));
     }
 
     /**
@@ -56,7 +60,8 @@ class VisitaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $utt = Visita::findorfail($id);
+        return View("visita.edit")->with(compact('vis'));
     }
 
     /**
@@ -79,6 +84,7 @@ class VisitaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Visita::where(['id'=>$id])->delete();
+        return Redirect('/visita')->with('fm_success','Visita eliminado com sucesso');
     }
 }

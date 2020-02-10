@@ -13,31 +13,26 @@
 
                 <!-- Nome input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Servico</label>  
-                  <div class="col-md-4">
-                  <input id="servico" name="servico" type="text" class="form-control input-md @error('servico') is-invalid @enderror">
+                  <label class="col-md-4 control-label" for="textinput">Serviços</label>  
+                  <div class="col-md-4 txta">
+                    <textarea class="txta" id="ServicosV" name="ServicosV" rows="4" cols="50">
+                    </textarea>
                   </div>
                 </div>
-                    @error('servico')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                     @enderror
                 <!-------------------->
 
-                <!-- Nome input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Categoria</label>  
-                  <div class="col-md-4">
-                  <input id="catg" name="catg" type="text" class="form-control input-md @error('catg') is-invalid @enderror">
+                  <label class="col-md-4 control-label" for="textinput">Serviços</label>  
+                  <div class="col-md-4 txta">
+                    <select name="cars">
+                      @foreach ($users as $item)
+                          
+                      @endforeach
+                      <option value="volvo">Volvo</option>
+
+                    </select>
                   </div>
                 </div>
-                    @error('catg')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                     @enderror
-                <!-------------------->
 
                 <div class="form-group">
                   <button type="submit" class="btn btn-outline-dark">Adicionar</button>      

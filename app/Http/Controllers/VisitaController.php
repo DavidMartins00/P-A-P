@@ -37,7 +37,21 @@ class VisitaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nome' => 'required|max:255',
+
+          ]);
+      
+          $data = $request->all();
+          $utt = new Utente();
+          $utt->Nome = $data['nome'];
+          $utt->DtNasc = $data['dtNasc'];
+          $utt->Morada = $data['morada'];
+          $utt->CodPost = $data['codPost'];
+          $utt->Contactos = $data['contactos'];
+      
+          $utt->save();
+          return Redirect('/utente')->with('fm_success','Utente adicionado com sucesso!!');
     }
 
     /**

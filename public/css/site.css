@@ -55,6 +55,13 @@
   color:white;
 }
 
+.txta {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 
 
 /* Color Theme Swatches in Hex */

@@ -10,7 +10,7 @@
                 <fieldset>
                 
                 <!-- Form Name -->
-                <legend>Adicionar</legend>
+                <legend>Editar</legend>
                
                 <!-- Text input-->
                 <div class="form-group">

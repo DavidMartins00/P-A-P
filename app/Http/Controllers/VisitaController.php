@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Utente;
 use App\Visita;
 use Illuminate\Http\Request;
 
@@ -26,7 +28,9 @@ class VisitaController extends Controller
      */
     public function create()
     {
-        return view("visita.create");
+        $users = User::select()->get();
+        $utentes = Utente::select()->get();
+         return view('visita.create')->with(compact('users','utentes'));
     }
 
     /**
@@ -38,20 +42,19 @@ class VisitaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nome' => 'required|max:255',
-
+            'IdUtente' => 'required',
+            'IdFuncionario' => 'required',
+            'ServicosV' => 'required',
           ]);
       
           $data = $request->all();
-          $utt = new Utente();
-          $utt->Nome = $data['nome'];
-          $utt->DtNasc = $data['dtNasc'];
-          $utt->Morada = $data['morada'];
-          $utt->CodPost = $data['codPost'];
-          $utt->Contactos = $data['contactos'];
+          $vt = new Visita();
+          $vt->IdUtente = $data['IdUtente'];
+          $vt->IdFuncionario = $data['IdFuncionario'];
+          $vt->ServicosV = $data['ServicosV'];
       
-          $utt->save();
-          return Redirect('/utente')->with('fm_success','Utente adicionado com sucesso!!');
+          $vt->save();
+          return Redirect('/visita')->with('fm_success','Visita adicionado com sucesso!!');
     }
 
     /**
@@ -75,8 +78,10 @@ class VisitaController extends Controller
     public function edit($id)
     {
         $utt = Visita::findorfail($id);
-        return View("visita.edit")->with(compact('vis'));
-    }
+        return view('visita.index',[
+            'users' => User::orderBy('id')   
+            ]);
+        }
 
     /**
      * Update the specified resource in storage.

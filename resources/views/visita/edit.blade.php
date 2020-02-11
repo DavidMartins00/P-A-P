@@ -4,7 +4,7 @@
     <br>
 <div class="centercr">
     <center>  
-            <form class="form-horizontal" action="/servico/{{$serv->id}}" method="post">
+            <form class="form-horizontal" action="/visita/{{$vis->id}}" method="post">
               @csrf
               @method('put')
                 <fieldset>
@@ -12,23 +12,35 @@
                 <!-- Form Name -->
                 <legend>Editar</legend>
                
-                <!-- Text input-->
+                <!-- Nome input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Serviço</label>  
-                  <div class="col-md-4">
-                  <input id="servico" name="servico" type="text" class="form-control input-md" value="{{$serv->servico}}">
-                  </div>
+                  <label class="col-md-4 control-label" for="textinput">Serviços</label>  
+                    <textarea class="txta" block id="ServicosV" name="ServicosV" cols="50" rows="5"></textarea>
+                </div>
+                <!-------------------->
 
-                <br>
-
-                <!-- Text input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Categorias</label>  
-                  <div class="col-md-4">
-                  <input id="catg" name="catg" type="text" class="form-control input-md" value="{{$serv->categoria}}">
+                  <label class="col-md-4 control-label" for="textinput">Funcionario</label>  
+                  <div class="col-md-4 txta">
+                    <select name="IdFuncionario" id="IdFuncionario">
+                      utente
+                    @foreach ($users as $item)
+                    <option value="{{$item->id}}">{{$item->name}}</option>
+                      @endforeach        
+                    </select>
                   </div>
+                </div>
 
-                <br>
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="textinput">Utente</label>  
+                  <div class="col-md-4 txta">
+                    <select name="IdUtente" id="IdUtente">
+                    @foreach ($utentes as $item)
+                    <option value="{{$item->Id}}">{{$item->Nome}}</option>
+                      @endforeach        
+                    </select>
+                  </div>
+                </div>
 
                   <div class="form-group">
                     <button type="submit" class="btn btn-outline-dark">Editar</button>      

@@ -77,11 +77,11 @@ class VisitaController extends Controller
      */
     public function edit($id)
     {
-        $utt = Visita::findorfail($id);
-        return view('visita.index',[
-            'users' => User::orderBy('id')   
-            ]);
-        }
+        $vis = Visita::findorfail($id);
+        $users = User::select()->get();
+        $utentes = Utente::select()->get();
+        return view('visita.edit')->with(compact('vis','users','utentes'));
+    }
 
     /**
      * Update the specified resource in storage.
@@ -92,7 +92,25 @@ class VisitaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        
+        $request->validate([
+        'Nome' => 'required',
+        'DtNasc' => 'required',
+        'Morada' => 'required',
+        'CodPost' => 'required',
+        'Contactos' => 'required',
+        ]);
+           
+        Utente::where(['Id'=>$id])->update([
+        'Nome'=>$data['Nome'],
+        'DtNasc'=>$data['DtNasc'],
+        'Morada'=>$data['Morada'],
+        'CodPost'=>$data['CodPost'],
+        'Contactos'=>$data['Contactos'],
+      ]);
+
+      return Redirect('/utente')->with('fm_success','Utente alterado com sucesso!!');
     }
 
     /**

@@ -14,10 +14,7 @@
                 <!-- Nome input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Serviços</label>  
-                  <div class="col-md-4 txta">
-                    <textarea class="txta" id="ServicosV" name="ServicosV" rows="4" cols="50">
-                    </textarea>
-                  </div>
+                    <textarea class="txta" block id="ServicosV" name="ServicosV" cols="50" rows="5"></textarea>
                 </div>
                 <!-------------------->
 

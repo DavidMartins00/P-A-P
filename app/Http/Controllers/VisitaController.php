@@ -95,22 +95,18 @@ class VisitaController extends Controller
         $data = $request->all();
         
         $request->validate([
-        'Nome' => 'required',
-        'DtNasc' => 'required',
-        'Morada' => 'required',
-        'CodPost' => 'required',
-        'Contactos' => 'required',
+        'ServicosV' => 'required',
+        'IdFuncionario' => 'required',
+        'IdUtente' => 'required',
         ]);
            
-        Utente::where(['Id'=>$id])->update([
-        'Nome'=>$data['Nome'],
-        'DtNasc'=>$data['DtNasc'],
-        'Morada'=>$data['Morada'],
-        'CodPost'=>$data['CodPost'],
-        'Contactos'=>$data['Contactos'],
+        Visita::where(['id'=>$id])->update([
+        'ServicosV'=>$data['ServicosV'],
+        'IdFuncionario'=>$data['IdFuncionario'],
+        'IdUtente'=>$data['IdUtente'],
       ]);
 
-      return Redirect('/utente')->with('fm_success','Utente alterado com sucesso!!');
+      return Redirect('/visita')->with('fm_success','Utente alterado com sucesso!!');
     }
 
     /**

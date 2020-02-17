@@ -1,7 +1,7 @@
 @extends('layouts/app')
 @section('content') 
 
-<div class="fs">
+<div class="back">
     <br>
     <center>                  
     @forelse ($servico as $ser)

@@ -6,6 +6,7 @@ use App\role_user;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -52,6 +53,14 @@ class UserController extends Controller
     {
         //
     }
+
+    public function procurar(Request $request)
+    {
+        $pesq = $request->get('pesq');
+        $urs = DB::table('users')->where('name', 'LIKE', '%'.$pesq.'%')->paginate(10);
+        return view('user.index',['users' => $urs]);
+    }
+    
 
     /**
      * Show the form for editing the specified resource.

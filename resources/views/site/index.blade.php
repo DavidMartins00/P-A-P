@@ -1,5 +1,8 @@
 @extends('layouts/app')
 @section('content')
+<style>
+  body{ background-color: #ffffff; }
+</style>
 <!-- Carousel-->
   <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
@@ -44,6 +47,4 @@
       </div>
     </div>
   </div>
-
-
 @endsection

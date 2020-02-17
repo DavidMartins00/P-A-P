@@ -1,7 +1,8 @@
-@extends('layouts/app')
-@section('content') 
 
-<div class="fs">
+@extends('layouts/app')
+<div class="container-fluid" style="background-color:blue">
+@section('content') 
+<div class="back">
     <br>
     <center>                  
     @forelse ($estado as $est)
@@ -29,5 +30,5 @@
     </center>
 <br>
 </div>
-
 @endsection
+</div>

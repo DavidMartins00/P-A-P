@@ -1,6 +1,5 @@
 @extends('layouts/app')
 @section('content') 
-<div class="fs">
     <br>
 <div class="centercr">
     <center>  
@@ -34,5 +33,4 @@
      
 </div>
 <br>
-</div>
 @endsection

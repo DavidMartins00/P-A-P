@@ -1,6 +1,6 @@
 @extends('layouts/app')
 @section('content') 
-<div class="fs">
+<div class="back">
     <br>
         <!-- User -->
 <div class="centercr">
@@ -120,6 +120,7 @@
             </div>
      </center>
      </div>
+     <br>
 </div>
 
 @endsection

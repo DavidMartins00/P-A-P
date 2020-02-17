@@ -16,10 +16,6 @@ Auth::routes();
 Route::get('/', 'SiteController@index');
 Route::get('/home', 'SiteController@index');
 
-//REMOVER------------------------------
-Route::get('/a', 'SiteController@add');
-//REMOVER------------------------------
-
 Route::group(['middleware' => ['auth']],function(){
     Route::group(['middleware' => ['is_admin']],function(){
         
@@ -30,6 +26,7 @@ Route::group(['middleware' => ['auth']],function(){
         Route::resource('servico','ServicoController');
         Route::resource('estado','EstadoController'); 
         Route::resource('visita','VisitaController');
+        Route::get('/procurar','UserController@procurar');
     }); 
 });
 

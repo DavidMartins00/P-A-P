@@ -20,7 +20,4 @@ class SiteController extends Controller
     return view('site/menu');
   }
 
-  public function login(){
-    return view('user/login');
-  }
 }

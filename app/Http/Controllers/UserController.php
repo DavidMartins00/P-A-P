@@ -22,6 +22,20 @@ class UserController extends Controller
         ]);
     }
 
+    public function pesquisar(Request $request)
+    { 
+        $pesq = $request->get('pesq');
+        //$user = User::all();
+       // $users = DB::table('users')->where('name','OR','email', 'LIKE', '%'.$pesq.'%');
+        
+        $users = User::where('id','like','%'.$pesq.'%')
+        ->orwhere('name','like','%'.$pesq.'%')
+        ->orwhere('email','like','%'.$pesq.'%')
+        ->orwhere('type','like','%'.$pesq.'%')
+        ->get();
+        return view('user.index',['users' => $users]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -52,13 +66,6 @@ class UserController extends Controller
     public function show($id)
     {
         //
-    }
-
-    public function procurar(Request $request)
-    {
-        $pesq = $request->get('pesq');
-        $urs = DB::table('users')->where('name', 'LIKE', '%'.$pesq.'%')->paginate(10);
-        return view('user.index',['users' => $urs]);
     }
     
 

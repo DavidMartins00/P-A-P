@@ -26,7 +26,7 @@ Route::group(['middleware' => ['auth']],function(){
         Route::resource('servico','ServicoController');
         Route::resource('estado','EstadoController'); 
         Route::resource('visita','VisitaController');
-        Route::get('/procurar','UserController@procurar');
+        Route::get('/pusers','UserController@pesquisar');
     }); 
 });
 

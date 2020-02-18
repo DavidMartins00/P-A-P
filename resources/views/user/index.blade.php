@@ -6,7 +6,7 @@
     
         <div class="centercr">
             <center>
-            <form action="/procurar" method="GET">
+            <form action="/pusers" method="GET">
             <h3>Pequisar</h3>
             <div class="col-md-4">
                 <div class="col">

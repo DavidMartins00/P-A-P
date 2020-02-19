@@ -25,15 +25,14 @@ class UserController extends Controller
     public function pesquisar(Request $request)
     { 
         $pesq = $request->get('pesq');
-        //$user = User::all();
-       // $users = DB::table('users')->where('name','OR','email', 'LIKE', '%'.$pesq.'%');
         
-        $users = User::where('id','like','%'.$pesq.'%')
+        $res = User::where('id','like','%'.$pesq.'%')
         ->orwhere('name','like','%'.$pesq.'%')
         ->orwhere('email','like','%'.$pesq.'%')
         ->orwhere('type','like','%'.$pesq.'%')
         ->get();
-        return view('user.index',['users' => $users]);
+
+        return view('user.index',['users' => $res]);
     }
 
     /**

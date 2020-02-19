@@ -1,8 +1,25 @@
 @extends('layouts/app')
 @section('content') 
 
-<div class="back">
+<div class="back"> 
+    
     <br>
+    <div class="centercr">
+        <center>
+        <form action="/pserv" method="GET">
+        <h3>Pequisar</h3>
+        <div class="col-md-4">
+            <div class="col">
+        <input type="text" name="pesq" class="form-control" placeholder="Pesquisar">
+        <br>
+        <input type="submit" value="Pesquisar" class="btn btn-outline-warning">
+        </div>
+        </div>
+        </form>
+        </center>
+    </div>
+    <br>
+
     <center>                  
     @forelse ($servico as $ser)
         <div class="centercr">     

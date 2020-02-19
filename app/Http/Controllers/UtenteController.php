@@ -19,6 +19,21 @@ class UtenteController extends Controller
         ]);
     }
 
+    public function pesquisar(Request $request)
+    { 
+        $pesq = $request->get('pesq');
+        
+        $res = Utente::where('Id','like','%'.$pesq.'%')
+        ->orwhere('Nome','like','%'.$pesq.'%')
+        ->orwhere('DtNasc','like','%'.$pesq.'%')
+        ->orwhere('Morada','like','%'.$pesq.'%')
+        ->orwhere('CodPost','like','%'.$pesq.'%')
+        ->orwhere('Contactos','like','%'.$pesq.'%')
+        ->get();
+        
+        return view('utente.index',['Utente' => $res]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

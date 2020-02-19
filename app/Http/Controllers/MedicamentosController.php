@@ -19,6 +19,17 @@ class MedicamentosController extends Controller
         ]);
     }
 
+    public function pesquisar(Request $request)
+    { 
+        $pesq = $request->get('pesq');
+        
+        $res = Medicamentos::where('id','like','%'.$pesq.'%')
+        ->orwhere('nome','like','%'.$pesq.'%')
+        ->get();
+
+        return view('medic.index',['medica' => $res]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

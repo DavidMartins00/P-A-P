@@ -14,7 +14,7 @@
 Auth::routes();
 
 Route::get('/', 'SiteController@index');
-Route::get('/home', 'SiteController@index');
+Route::get('/home', 'SiteController@index')->name('/');
 
 Route::group(['middleware' => ['auth']],function(){
     Route::group(['middleware' => ['is_admin']],function(){
@@ -27,6 +27,11 @@ Route::group(['middleware' => ['auth']],function(){
         Route::resource('estado','EstadoController'); 
         Route::resource('visita','VisitaController');
         Route::get('/pusers','UserController@pesquisar');
+        Route::get('/ptt','UtenteController@pesquisar');
+        Route::get('/pmed','MedicamentosController@pesquisar');
+        Route::get('/pserv','ServicoController@pesquisar');
+        Route::get('/pest','EstadoController@pesquisar');
+        Route::get('/pvis','VisitaController@pesquisar');
     }); 
 });
 

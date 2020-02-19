@@ -19,6 +19,19 @@ class ServicoController extends Controller
         ]);
     }
 
+    public function pesquisar(Request $request)
+    { 
+        $pesq = $request->get('pesq');
+        
+        $res = Servico::where('id','like','%'.$pesq.'%')
+        ->orwhere('categoria','like','%'.$pesq.'%')
+        ->orwhere('servico','like','%'.$pesq.'%')
+        ->get();
+
+        return view('servico.index',['servico' => $res]);
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *

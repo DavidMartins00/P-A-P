@@ -3,7 +3,24 @@
 <div class="container-fluid" style="background-color:blue">
 @section('content') 
 <div class="back">
+    
     <br>
+    <div class="centercr">
+        <center>
+        <form action="/pest" method="GET">
+        <h3>Pequisar</h3>
+        <div class="col-md-4">
+            <div class="col">
+        <input type="text" name="pesq" class="form-control" placeholder="Pesquisar">
+        <br>
+        <input type="submit" value="Pesquisar" class="btn btn-outline-warning">
+        </div>
+        </div>
+        </form>
+        </center>
+    </div>
+<br>
+
     <center>                  
     @forelse ($estado as $est)
         <div class="centercr">     

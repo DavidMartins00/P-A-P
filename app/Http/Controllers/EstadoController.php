@@ -19,6 +19,17 @@ class EstadoController extends Controller
         ]);
     }
 
+    public function pesquisar(Request $request)
+    { 
+        $pesq = $request->get('pesq');
+        
+        $res = Estado::where('id','like','%'.$pesq.'%')
+        ->orwhere('nome','like','%'.$pesq.'%')
+        ->get();
+
+        return view('estado.index',['estado' => $res]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

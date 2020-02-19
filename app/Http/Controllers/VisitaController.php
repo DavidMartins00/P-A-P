@@ -21,6 +21,19 @@ class VisitaController extends Controller
         ]);
     }
 
+    public function pesquisar(Request $request)
+    { 
+        $pesq = $request->get('pesq');
+        
+        $res = Visita::where('id','like','%'.$pesq.'%')
+        ->orwhere('IdUtente','like','%'.$pesq.'%')
+        ->orwhere('IdFuncionario','like','%'.$pesq.'%')
+        ->orwhere('ServicosV','like','%'.$pesq.'%')
+        ->get();
+
+        return view('visita.index',['visita' => $res]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -2,8 +2,8 @@
 @section('content') 
 
 <div class="back">
-    <br>
     
+    <br>
         <div class="centercr">
             <center>
             <form action="/pusers" method="GET">
@@ -12,13 +12,14 @@
                 <div class="col">
             <input type="text" name="pesq" class="form-control" placeholder="Pesquisar">
             <br>
-            <input type="submit" class="btn btn-outline-warning">
-        </div>
-        </div>
-    </form>
-    </center>
+            <input type="submit" value="Pesquisar" class="btn btn-outline-warning">
+            </div>
+            </div>
+            </form>
+            </center>
         </div>
     <br>
+
     <center>                  
     @forelse ($users as $user)
         <div class="centercr">     

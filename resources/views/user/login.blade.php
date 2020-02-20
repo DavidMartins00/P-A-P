@@ -1,7 +1,6 @@
 @extends('layouts/app')
 @section('content') 
-
-    <br>
+<br>
 <div class="centercr">
     <center>  
             <form class="form-horizontal" method="POST" action="{{ route('login') }}">
@@ -39,7 +38,6 @@
                 </fieldset>
             </form>
      </center>
-     
 </div>
 <br>
 @endsection

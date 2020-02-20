@@ -31,7 +31,7 @@
                     <a href="/user/{{$user->id}}/edit" style="margin:1px" class="btn btn-outline-warning">Editar</a>
                 </div>
                 <div class="col">
-                    <form class="" action="/user/{{$user->id}}" style="margin:1px" method="post">
+                    <form action="/user/{{$user->id}}" style="margin:1px" method="post">
                         @csrf
                         @method('delete')
                         <input type="submit" name="" class="btn btn-outline-danger" value="Apagar">

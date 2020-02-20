@@ -16,22 +16,40 @@ class VisitaController extends Controller
      */
     public function index()
     {
-        return view('visita.index',[
-            'visita' => Visita::orderBy('id')->paginate(10)
-        ]);
+        $visita = Visita::select()->get();
+        $users = User::select()->get();
+        $utentes = Utente::select()->get();
+        return view('visita.index')->with(compact('visita','users','utentes'));
     }
 
     public function pesquisar(Request $request)
     { 
-        $pesq = $request->get('pesq');
-        
-        $res = Visita::where('id','like','%'.$pesq.'%')
-        ->orwhere('IdUtente','like','%'.$pesq.'%')
-        ->orwhere('IdFuncionario','like','%'.$pesq.'%')
-        ->orwhere('ServicosV','like','%'.$pesq.'%')
-        ->get();
 
-        return view('visita.index',['visita' => $res]);
+        $pesq = $request->get('pesq');
+        $urs = $request->get('users');
+        $utt = $request->get('utente');
+        
+        $res = Visita::where('id','like','%'.$pesq.'%')->get();
+        // ->orwhere('IdUtente','like','%'.$utt.'%')
+        // ->orwhere('IdFuncionario','like','%'.$urs.'%')
+        // ->orwhere('ServicosV','like','%'.$pesq.'%')
+        // 
+
+        if($urs != 0){
+        $res = Visita::whereHas('user', function($q) use($urs){
+            $q->where('IdFuncionario','LIKE','%'.$urs.'%');
+        })->get();
+        }
+
+        if($utt != 0){
+            $res = Visita::whereHas('utente', function($q) use($utt){
+                $q->where('IdUtente','LIKE','%'.$utt.'%');
+            })->get();
+            }
+
+        $users = User::select()->get();
+        $utentes = Utente::select()->get();
+        return view('visita.index',['visita' => $res])->with(compact('users','utentes'));
     }
 
     /**
@@ -108,9 +126,9 @@ class VisitaController extends Controller
         $data = $request->all();
         
         $request->validate([
-        'ServicosV' => 'required',
-        'IdFuncionario' => 'required',
-        'IdUtente' => 'required',
+        'ServicosV' => 'sometimes',
+        'IdFuncionario' => 'sometimes',
+        'IdUtente' => 'sometimes',
         ]);
            
         Visita::where(['id'=>$id])->update([

@@ -33,6 +33,9 @@ Route::group(['middleware' => ['auth']],function(){
         Route::get('/pest','EstadoController@pesquisar');
         Route::get('/pvis','VisitaController@pesquisar');
     }); 
+    Route::get('/horario','SiteController@horario');
+
+
 });
 
   

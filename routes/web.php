@@ -26,12 +26,16 @@ Route::group(['middleware' => ['auth']],function(){
         Route::resource('servico','ServicoController');
         Route::resource('estado','EstadoController');
         Route::resource('visita','VisitaController');
+        //Pesquisar
         Route::get('/pusers','UserController@pesquisar');
         Route::get('/ptt','UtenteController@pesquisar');
         Route::get('/pmed','MedicamentosController@pesquisar');
         Route::get('/pserv','ServicoController@pesquisar');
         Route::get('/pest','EstadoController@pesquisar');
         Route::get('/pvis','VisitaController@pesquisar');
+        ////////
+        Route::get('/load-events','EventController@loadEvents')->name('routeLoadEvents');
+        Route::put('/event-update','EventController@update')->name('routeEventUpdate');
     });
     Route::get('/horario','SiteController@horario');
     Route::resource('event','EventController');

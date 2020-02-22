@@ -1,8 +1,8 @@
 @extends('layouts/app')
-@section('content') 
+@section('content')
 
 <div class="back">
-    
+
     <br>
         <div class="centercr">
             <center>
@@ -20,9 +20,9 @@
         </div>
     <br>
 
-    <center>                  
+    <center>
     @forelse ($medica as $med)
-        <div class="centercr">     
+        <div class="centercr">
             <p>Id: {{$med->id}}</p>
             <p>Nome: {{$med->nome}}</p>
             <div class="row">
@@ -47,4 +47,3 @@
 <br>
 </div>
 
-@endsection

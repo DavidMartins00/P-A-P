@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html>
     <head>
         <meta charset='utf-8' />
@@ -9,10 +9,16 @@
 
         <link href={{asset('assets/fullcalendar/css/style.css')}} rel='stylesheet' />
 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
+
+     @include('events.modal-calendar')
+
     <div id='wrap'>
 
         <div id='external-events'>
@@ -36,6 +42,7 @@
             id='calendar'
             data-route-load-events="{{route('routeLoadEvents')}}"
             data-route-event-update="{{route('routeEventUpdate')}}"
+            data-route-event-store="{{route('routeEventStore')}}"
         >
         </div>
 
@@ -52,6 +59,11 @@
     <script src={{asset('assets/fullcalendar/packages/core/locales-all.js')}}></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 

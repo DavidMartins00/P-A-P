@@ -16,12 +16,12 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
-
+    <br><br>
      @include('events.modal-calendar')
 
     <div id='wrap'>
 
-        <div id='external-events'>
+        <div hidden id='external-events'>
             <h4>Draggable Events</h4>
 
             <div id='external-events-list'>
@@ -43,6 +43,7 @@
             data-route-load-events="{{route('routeLoadEvents')}}"
             data-route-event-update="{{route('routeEventUpdate')}}"
             data-route-event-store="{{route('routeEventStore')}}"
+            data-route-event-delete="{{route('routeEventDelete')}}"
         >
         </div>
 

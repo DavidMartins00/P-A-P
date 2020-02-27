@@ -1,13 +1,13 @@
 @extends('layouts/app')
-@section('content') 
+@section('content')
 <div class="back">
     <br>
-        <!-- User -->
+                            <!-- User -->
 <div class="centercr">
-    <center>                
+    <center>
             <!-- Form Name -->
             <legend style="color:#2C2F33">User</legend>
-                
+
 
             <!-- Butao adicionar-->
             <div class="container">
@@ -19,15 +19,33 @@
                 <a class="btn btn-outline-success btm" href="{{ route('user.create') }}">Adicionar</a>
             </div>
      </center>
-     
+
 </div>
 <br>
+
+                                <!-- Horario -->
+    <div class="centercr">
+        <center>
+            <!-- Form Name -->
+            <legend style="color:#2C2F33">Horario</legend>
+
+
+            <!-- Butao adicionar-->
+            <div class="container">
+                <a class="btn btn-outline-warning btm" href="/event">Editar</a>
+            </div>
+            <br>
+
+        </center>
+
+    </div>
+    <br>
                             <!-- Utente -->
 <div class="centercr">
-    <center>                
+    <center>
             <!-- Form Name -->
             <legend style="color:#2C2F33">Utente</legend>
-                
+
 
             <!-- Butao adicionar-->
             <div class="container">
@@ -39,15 +57,15 @@
                 <a class="btn btn-outline-success btm" href="{{ route('utente.create') }}">Adicionar</a>
             </div>
      </center>
-     
+
 </div>
 <br>
                              <!-- Medicamentos -->
 <div class="centercr">
-    <center>                
+    <center>
             <!-- Form Name -->
             <legend style="color:#2C2F33">Medicamentos</legend>
-                
+
 
             <!-- Butao adicionar-->
             <div class="container">
@@ -59,15 +77,15 @@
                 <a class="btn btn-outline-success btm" href="{{ route('medica.create') }}">Adicionar</a>
             </div>
      </center>
-     
+
 </div>
 <br>
                              <!-- Serviços -->
 <div class="centercr">
-    <center>                
+    <center>
             <!-- Form Name -->
             <legend style="color:#2C2F33">Serviços</legend>
-                
+
 
             <!-- Butao adicionar-->
             <div class="container">
@@ -83,10 +101,10 @@
 
                              <!-- Estado -->
 <div class="centercr">
-    <center>                
+    <center>
             <!-- Form Name -->
             <legend style="color:#2C2F33">Estado</legend>
-                
+
 
             <!-- Butao adicionar-->
             <div class="container">
@@ -104,10 +122,10 @@
 
                              <!-- Visita -->
 <div class="centercr">
-    <center>                
+    <center>
             <!-- Form Name -->
             <legend style="color:#2C2F33">Visita</legend>
-                
+
 
             <!-- Butao adicionar-->
             <div class="container">

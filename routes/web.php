@@ -34,14 +34,15 @@ Route::group(['middleware' => ['auth']],function(){
         Route::get('/pest','EstadoController@pesquisar');
         Route::get('/pvis','VisitaController@pesquisar');
         ////////
+        Route::get('/event','EventController@index');
         Route::get('/load-events','EventController@loadEvents')->name('routeLoadEvents');
         Route::put('/event-update','EventController@update')->name('routeEventUpdate');
         Route::post('/event-store','EventController@store')->name('routeEventStore');
         Route::delete('/event-destroy','EventController@destroy')->name('routeEventDelete');
 
+
     });
     Route::get('/horario','SiteController@horario');
-    Route::resource('event','EventController');
 
 
 });

@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
         eventLimit: true,
         droppable: false, // this allows things to be dropped onto the calendar
 
-        events: routeEvents('routeLoadEvents'),
+
+        events: routeEvents('routeLoadHorario'),
     });
     calendar.render();
 

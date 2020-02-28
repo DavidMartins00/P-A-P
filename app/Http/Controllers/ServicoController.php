@@ -20,9 +20,9 @@ class ServicoController extends Controller
     }
 
     public function pesquisar(Request $request)
-    { 
+    {
         $pesq = $request->get('pesq');
-        
+
         $res = Servico::where('id','like','%'.$pesq.'%')
         ->orwhere('categoria','like','%'.$pesq.'%')
         ->orwhere('servico','like','%'.$pesq.'%')
@@ -54,9 +54,9 @@ class ServicoController extends Controller
             'servico' => 'required',
             'catg' => 'required',
           ]);
-      
+
           $data = $request->all();
-          $serv = new Servico();    
+          $serv = new Servico();
           $serv->servico = $data['servico'];
           $serv->categoria = $data['catg'];
           $serv->save();
@@ -83,7 +83,7 @@ class ServicoController extends Controller
     public function edit($id)
     {
         $serv = Servico::findorfail($id);
-        return View("servico.edit")->with(compact('serv')); 
+        return View("servico.edit")->with(compact('serv'));
     }
 
     /**

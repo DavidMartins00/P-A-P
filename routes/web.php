@@ -42,8 +42,8 @@ Route::group(['middleware' => ['auth']],function(){
 
 
     });
-    Route::get('/horario','SiteController@horario');
-
+    Route::get('/horario','HorarioController@index');
+    Route::get('/load-horario','HorarioController@LoadHorario')->name('routeLoadHorario');
 
 });
 

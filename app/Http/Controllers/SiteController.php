@@ -11,17 +11,13 @@ class SiteController extends Controller
   {
       return view('site/index');
   }
-  
+
   public function add(){
     return view('user/register');
   }
 
   public function menu(){
     return view('site/menu');
-  }
-
-  public function horario(){
-    return view('horario/index');
   }
 
 }

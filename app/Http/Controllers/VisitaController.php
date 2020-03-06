@@ -6,13 +6,14 @@ use App\User;
 use App\Utente;
 use App\Visita;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class VisitaController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -23,17 +24,17 @@ class VisitaController extends Controller
     }
 
     public function pesquisar(Request $request)
-    { 
+    {
 
         $pesq = $request->get('pesq');
         $urs = $request->get('users');
         $utt = $request->get('utente');
-        
+
         $res = Visita::where('id','like','%'.$pesq.'%')->get();
         // ->orwhere('IdUtente','like','%'.$utt.'%')
         // ->orwhere('IdFuncionario','like','%'.$urs.'%')
         // ->orwhere('ServicosV','like','%'.$pesq.'%')
-        // 
+        //
 
         if($urs != 0){
         $res = Visita::whereHas('user', function($q) use($urs){
@@ -55,7 +56,7 @@ class VisitaController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -67,8 +68,8 @@ class VisitaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
@@ -77,13 +78,13 @@ class VisitaController extends Controller
             'IdFuncionario' => 'required',
             'ServicosV' => 'required',
           ]);
-      
+
           $data = $request->all();
           $vt = new Visita();
           $vt->IdUtente = $data['IdUtente'];
           $vt->IdFuncionario = $data['IdFuncionario'];
           $vt->ServicosV = $data['ServicosV'];
-      
+
           $vt->save();
           return Redirect('/visita')->with('fm_success','Visita adicionado com sucesso!!');
     }
@@ -92,7 +93,7 @@ class VisitaController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
@@ -104,7 +105,7 @@ class VisitaController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit($id)
     {
@@ -117,20 +118,20 @@ class VisitaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, $id)
     {
         $data = $request->all();
-        
+
         $request->validate([
         'ServicosV' => 'sometimes',
         'IdFuncionario' => 'sometimes',
         'IdUtente' => 'sometimes',
         ]);
-           
+
         Visita::where(['id'=>$id])->update([
         'ServicosV'=>$data['ServicosV'],
         'IdFuncionario'=>$data['IdFuncionario'],
@@ -144,7 +145,7 @@ class VisitaController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {

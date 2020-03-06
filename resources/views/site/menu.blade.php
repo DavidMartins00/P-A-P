@@ -6,7 +6,7 @@
 <div class="centercr">
     <center>
             <!-- Form Name -->
-            <legend style="color:#2C2F33">User</legend>
+            <legend style="color:#2C2F33">Utilizadores</legend>
 
 
             <!-- Butao adicionar-->
@@ -27,7 +27,7 @@
     <div class="centercr">
         <center>
             <!-- Form Name -->
-            <legend style="color:#2C2F33">Horario</legend>
+            <legend style="color:#2C2F33">Horário</legend>
 
 
             <!-- Butao adicionar-->

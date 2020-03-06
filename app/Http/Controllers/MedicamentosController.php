@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Medicamentos;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class MedicamentosController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -20,9 +21,9 @@ class MedicamentosController extends Controller
     }
 
     public function pesquisar(Request $request)
-    { 
+    {
         $pesq = $request->get('pesq');
-        
+
         $res = Medicamentos::where('id','like','%'.$pesq.'%')
         ->orwhere('nome','like','%'.$pesq.'%')
         ->get();
@@ -33,7 +34,7 @@ class MedicamentosController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -43,18 +44,18 @@ class MedicamentosController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
         $request->validate([
             'nome' => 'required|max:255',
           ]);
-      
+
           $data = $request->all();
           $med = new Medicamentos();
-          $med->Nome = $data['nome']; 
+          $med->Nome = $data['nome'];
           $med->save();
           return Redirect('/medica')->with('fm_success','Medicamento adicionado com sucesso!!');
     }
@@ -63,7 +64,7 @@ class MedicamentosController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
@@ -74,20 +75,20 @@ class MedicamentosController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit($id)
     {
         $med = Medicamentos::findorfail($id);
-        return View("medic.edit")->with(compact('med')); 
+        return View("medic.edit")->with(compact('med'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, $id)
     {
@@ -107,7 +108,7 @@ class MedicamentosController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {

@@ -1,9 +1,9 @@
 
 @extends('layouts/app')
 <div class="container-fluid" style="background-color:blue">
-@section('content') 
+@section('content')
 <div class="back">
-    
+
     <br>
     <div class="centercr">
         <center>
@@ -13,7 +13,7 @@
             <div class="col">
         <input type="text" name="pesq" class="form-control" placeholder="Pesquisar">
         <br>
-        <input type="submit" value="Pesquisar" class="btn btn-outline-warning">
+        <input type="submit" value="Pesquisar" class="btn btn-outline-warning  btt">
         </div>
         </div>
         </form>
@@ -21,9 +21,9 @@
     </div>
 <br>
 
-    <center>                  
+    <center>
     @forelse ($estado as $est)
-        <div class="centercr">     
+        <div class="centercr">
             <p>Id: {{$est->id}}</p>
             <p>Nome: {{$est->nome}}</p>
             <div class="row">

@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Utente;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class UtenteController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -20,9 +21,9 @@ class UtenteController extends Controller
     }
 
     public function pesquisar(Request $request)
-    { 
+    {
         $pesq = $request->get('pesq');
-        
+
         $res = Utente::where('Id','like','%'.$pesq.'%')
         ->orwhere('Nome','like','%'.$pesq.'%')
         ->orwhere('DtNasc','like','%'.$pesq.'%')
@@ -30,14 +31,14 @@ class UtenteController extends Controller
         ->orwhere('CodPost','like','%'.$pesq.'%')
         ->orwhere('Contactos','like','%'.$pesq.'%')
         ->get();
-        
+
         return view('utente.index',['Utente' => $res]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -47,8 +48,8 @@ class UtenteController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
@@ -59,7 +60,7 @@ class UtenteController extends Controller
             'codPost' => 'required',
             'contactos' => 'required',
           ]);
-      
+
           $data = $request->all();
           $utt = new Utente();
           $utt->Nome = $data['nome'];
@@ -67,7 +68,7 @@ class UtenteController extends Controller
           $utt->Morada = $data['morada'];
           $utt->CodPost = $data['codPost'];
           $utt->Contactos = $data['contactos'];
-      
+
           $utt->save();
           return Redirect('/utente')->with('fm_success','Utente adicionado com sucesso!!');
     }
@@ -76,7 +77,7 @@ class UtenteController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
@@ -88,25 +89,25 @@ class UtenteController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit($id)
     {
         $utt = Utente::findorfail($id);
-         return View("utente.edit")->with(compact('utt'));  
+         return View("utente.edit")->with(compact('utt'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, $id)
     {
         $data = $request->all();
-        
+
         $request->validate([
         'Nome' => 'required',
         'DtNasc' => 'required',
@@ -114,7 +115,7 @@ class UtenteController extends Controller
         'CodPost' => 'required',
         'Contactos' => 'required',
         ]);
-           
+
         Utente::where(['Id'=>$id])->update([
         'Nome'=>$data['Nome'],
         'DtNasc'=>$data['DtNasc'],
@@ -130,7 +131,7 @@ class UtenteController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {

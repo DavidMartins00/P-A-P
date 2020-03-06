@@ -1,19 +1,19 @@
 @extends('layouts/app')
-@section('content') 
+@section('content')
 <div class="back">
     <br>
 <div class="centercr">
-    <center>  
+    <center>
             <form class="form-horizontal" action="{{ route('servico.store') }}" method="post">
               @csrf
                 <fieldset>
-                
+
                 <!-- Form Name -->
                 <legend>Adicionar</legend>
 
                 <!-- Nome input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Servico</label>  
+                  <label class="col-md-4 control-label" for="textinput">Serviço</label>
                   <div class="col-md-4">
                   <input id="servico" name="servico" type="text" class="form-control input-md @error('servico') is-invalid @enderror">
                   </div>
@@ -27,7 +27,7 @@
 
                 <!-- Nome input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Categoria</label>  
+                  <label class="col-md-4 control-label" for="textinput">Categoria</label>
                   <div class="col-md-4">
                   <input id="catg" name="catg" type="text" class="form-control input-md @error('catg') is-invalid @enderror">
                   </div>
@@ -40,12 +40,12 @@
                 <!-------------------->
 
                 <div class="form-group">
-                  <button type="submit" class="btn btn-outline-dark">Adicionar</button>      
-                </div>                
+                  <button type="submit" class="btn btn-outline-dark btt">Adicionar</button>
+                </div>
                 </fieldset>
             </form>
      </center>
-     
+
 </div>
 <br>
 </div>

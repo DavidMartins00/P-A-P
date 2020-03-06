@@ -12,7 +12,7 @@
                 <div class="col">
             <input type="text" name="pesq" class="form-control" placeholder="Pesquisar">
             <br>
-            <input type="submit" value="Pesquisar" class="btn btn-outline-warning">
+            <input type="submit" value="Pesquisar" class="btn btn-outline-warning  btt">
             </div>
             </div>
             </form>

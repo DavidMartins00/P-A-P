@@ -16,6 +16,8 @@ Auth::routes();
 Route::get('/', 'SiteController@index');
 Route::get('/home', 'SiteController@index')->name('/');
 
+Route::post('/send', 'SiteController@sender');
+
 Route::group(['middleware' => ['auth']],function(){
     Route::group(['middleware' => ['is_admin']],function(){
 
@@ -46,5 +48,6 @@ Route::group(['middleware' => ['auth']],function(){
     Route::get('/load-horario','HorarioController@LoadHorario')->name('routeLoadHorario');
 
 });
+
 
 

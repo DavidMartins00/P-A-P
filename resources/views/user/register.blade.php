@@ -1,19 +1,19 @@
 @extends('layouts/app')
-@section('content') 
+@section('content')
 <div class="back">
     <br>
 <div class="centercr">
-    <center>  
+    <center>
             <form class="form-horizontal" action="{{ route('register') }}" method="post">
               @csrf
                 <fieldset>
-                
+
                 <!-- Form Name -->
                 <legend>Adicionar</legend>
 
                 <!-- Nome input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Nome</label>  
+                  <label class="col-md-4 control-label" for="textinput">Nome</label>
                   <div class="col-md-4">
                   <input id="name" name="name" type="text" class="form-control input-md @error('name') is-invalid @enderror">
                   </div>
@@ -26,7 +26,7 @@
 
                 <!-- Email input-->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="textinput">Email</label>  
+                  <label class="col-md-4 control-label" for="textinput">Email</label>
                   <div class="col-md-4">
                   <input id="email" name="email" type="text" class="form-control input-md @error('email') is-invalid @enderror">
                   </div>
@@ -36,7 +36,7 @@
                         <strong>{{ $message }}</strong>
                     </span>
                      @enderror
-                
+
                 <!-- Password input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="passwordinput">Senha</label>
@@ -61,16 +61,16 @@
                         <strong>{{ $message }}</strong>
                     </span>
                      @enderror
-                
 
-                
+
+
                 <div class="form-group">
-                  <button type="submit" class="btn btn-outline-dark">Registar</button>      
-                </div>                
+                  <button type="submit" class="btn btn-outline-dark btt">Registar</button>
+                </div>
                 </fieldset>
             </form>
      </center>
-     
+
 </div>
 <br>
 </div>

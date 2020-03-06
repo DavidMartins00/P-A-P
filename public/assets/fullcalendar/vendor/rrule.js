@@ -509,9 +509,9 @@ var __assign = function() {
             for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
         }
         return t;
-    }
+    };
     return __assign.apply(this, arguments);
-}
+};
 
 function __rest(s, e) {
     var t = {};
@@ -646,7 +646,7 @@ function __asyncValues(o) {
 function __makeTemplateObject(cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
-};
+}
 
 function __importStar(mod) {
     if (mod && mod.__esModule) return mod;
@@ -1328,9 +1328,9 @@ function optionsToString(options) {
                 On the other hand, rule.origOptions is an array of Weekdays.
                 We need to handle both cases here.
                 It might be worth change RRule to keep the Weekdays.
-      
+
                 Also, BYWEEKDAY (used by RRule) vs. BYDAY (RFC)
-      
+
                 */
                 key = 'BYDAY';
                 outValue = Object(helpers["m" /* toArray */])(value).map(function (wday) {

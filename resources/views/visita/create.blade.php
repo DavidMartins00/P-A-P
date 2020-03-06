@@ -19,7 +19,7 @@
                     <!-------------------->
 
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="textinput">Funcionario</label>
+                        <label class="col-md-4 control-label" for="textinput">Funcionário</label>
                         <div class="col-md-4 txta">
                             <select name="IdFuncionario" id="IdFuncionario">
                                 utente
@@ -42,7 +42,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-outline-dark">Adicionar</button>
+                        <button type="submit" class="btn btn-outline-dark btt">Adicionar</button>
                     </div>
                 </fieldset>
             </form>

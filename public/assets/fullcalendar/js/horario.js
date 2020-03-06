@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var Calendar = FullCalendar.Calendar;
-    var Draggable = FullCalendarInteraction.Draggable
+    var Draggable = FullCalendarInteraction.Draggable;
 
     /* initialize the external events
     -----------------------------------------------------------------*/

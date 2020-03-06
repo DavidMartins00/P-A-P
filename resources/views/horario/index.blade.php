@@ -40,7 +40,7 @@
 
     <div
         id='calendar'
-        data-route-load-events="{{route('routeLoadHorario')}}"
+        data-route-load-horario="{{route('routeLoadHorario')}}"
         data-route-event-update="{{route('routeEventUpdate')}}"
         data-route-event-store="{{route('routeEventStore')}}"
         data-route-event-delete="{{route('routeEventDelete')}}"

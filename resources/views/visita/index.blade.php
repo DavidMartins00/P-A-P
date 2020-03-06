@@ -14,9 +14,9 @@
                     <div class="row">
                         <div class="container">
                         {{-- Funcionarios --}}
-                        <h4>Funcionario</h4>
+                        <h4>Funcionário</h4>
                         <select class="custom-select" name="users" id="IdFuncionario">
-                            <option class="dropdown-menu">Selecionar Funcionario</option>
+                            <option class="dropdown-menu">Selecionar Funcionário</option>
                             @foreach ($users as $item)
                             <option value="{{$item->id}}">{{$item->name}}</option>
                             @endforeach
@@ -35,7 +35,7 @@
                     </div>
                     </div>
                     <br>
-                    <input type="submit" value="Pesquisar" class="btn btn-outline-warning">
+                    <input type="submit" value="Pesquisar" class="btn btn-outline-warning btt">
                 </div>
             </form>
         </center>
@@ -47,7 +47,7 @@
         <div class="centercr">
             <p>Id: {{$vis->id}}</p>
             <p>Utente: {{$vis->utente->Nome}}</p>
-            <p>Funcionario: {{$vis->user->name}}</p>
+            <p>Funcionário: {{$vis->user->name}}</p>
             <p>Serviços:</p>
             <div class="card w-90 text cardy">
                 {{$vis->ServicosV}}

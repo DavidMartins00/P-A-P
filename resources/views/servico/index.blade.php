@@ -1,8 +1,8 @@
 @extends('layouts/app')
-@section('content') 
+@section('content')
 
-<div class="back"> 
-    
+<div class="back">
+
     <br>
     <div class="centercr">
         <center>
@@ -12,7 +12,7 @@
             <div class="col">
         <input type="text" name="pesq" class="form-control" placeholder="Pesquisar">
         <br>
-        <input type="submit" value="Pesquisar" class="btn btn-outline-warning">
+        <input type="submit" value="Pesquisar" class="btn btn-outline-warning  btt">
         </div>
         </div>
         </form>
@@ -20,9 +20,9 @@
     </div>
     <br>
 
-    <center>                  
+    <center>
     @forelse ($servico as $ser)
-        <div class="centercr">     
+        <div class="centercr">
             <p>Id: {{$ser->id}}</p>
             <p>Serviço: {{$ser->servico}}</p>
             <p>Categoria: {{$ser->categoria}}</p>

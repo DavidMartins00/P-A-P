@@ -38,15 +38,6 @@
                         pagination += "</ul>";
 
                         $(".home").append(pagination);
-                        /*
-
-                        Tip: The two click events below are the same:
-
-                        $(".pagination a").on("click",function() {
-                          $.scrollify.move($(this).attr("href"));
-                        });
-
-                        */
                         $(".pagination a").on("click",$.scrollify.move);
                     }
                 });
@@ -76,8 +67,8 @@
         </div>
         <div>
             <div class="center tt">
-                <h1>Testeeeeeeee</h1>
-                <h3>asdasdasdasdasdasdasdasasdas</h3>
+                <h1>Nome do lar</h1>
+                <h3>Pequena descrição do lar</h3>
             </div>
         </div>
     </section>
@@ -150,7 +141,7 @@
         </div>
     </section>
     <section name="cc">
-        <br><br><br> <br> <br> <br> <br>
+        <br><br><br>
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -168,27 +159,41 @@
                 </div>
             </div>
 
-            <div class="col-5">
+            <div class="row">
+                <!--<div class="col-7" style="background-color: white">-->
 
-                <div class="formc" style="background-color: white">
-                <form method="post" action="/send">
-                    @csrf
-                    Nome: <input type="text" name="name" > <br />
-                    Email: <input type="email" name="email" > <br />
-                    Contacto: <input type="text" name="subject" > <br />
-                    Mensagem: <textarea name="msg"></textarea>
-                    <button type="submit" name="send_message_btn">Send</button>
-                </form>
+                    <div class="formc">
+                        <form method="post" action="/send">
+                            @csrf
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input class="form-control" type="text" name="name" >
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input class="form-control" type="email" name="email" >
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Contacto</label>
+                                <input class="form-control" type="text" name="subject" >
+                            </div>
+                            <div class="form-group">
+                                <label for="msg">Mensagem</label>
+                                <textarea class="form-control" name="msg"></textarea>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-outline-success" name="send_message_btn">Enviar</button>
+                        </form>
+                    </div>
+
                 </div>
+                <div class="col">
 
+                </div>
             </div>
-            <div class="col-7">
-
-            </div>
-
         </div>
+        <br>
     </section>
 
 
 @endsection
-

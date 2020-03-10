@@ -90,8 +90,12 @@
 }
 
 .formc{
+    position: relative;
     margin: auto;
-    width: 50%;
+    top: -100px;
+    left: -300px;
+    width: 450px;
+    height: auto;
     padding: 10px;
     border: 3px solid #F2E2CE;
     text-align: center;

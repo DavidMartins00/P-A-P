@@ -31,7 +31,6 @@ Route::group(['middleware' => ['auth']],function(){
         //Pesquisar
         Route::get('/pusers','UserController@pesquisar');
         Route::get('/ptt','UtenteController@pesquisar');
-        Route::get('/pmed','MedicamentosController@pesquisar');
         Route::get('/pserv','ServicoController@pesquisar');
         Route::get('/pest','EstadoController@pesquisar');
         Route::get('/pvis','VisitaController@pesquisar');

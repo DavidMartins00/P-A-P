@@ -37,6 +37,19 @@
                     </span>
                      @enderror
 
+                <!-- Password App input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="passwordainput">Senha App</label>
+                        <div class="col-md-4">
+                            <input id="passworda" type="password" class="form-control @error('passworda') is-invalid @enderror" name="passworda" required autocomplete="new-password">
+                        </div>
+                    </div>
+                    @error('passworda')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+
                 <!-- Password input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="passwordinput">Senha</label>

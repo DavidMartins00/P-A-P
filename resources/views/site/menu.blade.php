@@ -31,7 +31,7 @@
             <legend style="color:#2C2F33">Horário</legend>
 
 
-            <!-- Butao adicionar-->
+            <!-- Butao editar-->
             <div class="container">
                 <a class="btn btn-outline-warning btm" href="/event">Editar</a>
             </div>
@@ -61,26 +61,7 @@
 
 </div>
 <br>
-                             <!-- Medicamentos -->
-<div class="centercr">
-    <center>
-            <!-- Form Name -->
-            <legend style="color:#2C2F33">Medicamentos</legend>
-
-
-            <!-- Butao adicionar-->
-            <div class="container">
-                <a class="btn btn-outline-secondary btm" href="/medica">Listar</a>
-            </div>
-            <br>
-            <!-- Butao adicionar-->
-            <div class="container">
-                <a class="btn btn-outline-success btm" href="{{ route('medica.create') }}">Adicionar</a>
-            </div>
-     </center>
-
-</div>
-<br>
+    
                              <!-- Serviços -->
 <div class="centercr">
     <center>

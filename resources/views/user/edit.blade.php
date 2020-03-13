@@ -36,6 +36,14 @@
                   </div>
                 </div>
 
+                    <!-- Password App input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="passwordinput">Senha App</label>
+                        <div class="col-md-4">
+                            <input id="passworda" name="passworda" type="password" class="form-control input-md">
+                        </div>
+                    </div>
+
                 <!-- Nivel input-->
 
                 <div class="form-group">

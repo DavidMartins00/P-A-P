@@ -79,9 +79,14 @@
 .textaa{
     background-color: #afffac;
     border-radius: 5px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .pp{
+    margin: 0;
     padding-left: 2%;
 }
 

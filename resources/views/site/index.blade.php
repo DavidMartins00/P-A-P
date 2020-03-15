@@ -2,7 +2,9 @@
 @section('content')
     <head>
         <style>
-            body {background-color: #ffffff;}
+            body {
+                background-color: #ffffff;
+            }
         </style>
 
 
@@ -11,12 +13,12 @@
 
         <script>
 
-            $(function() {
+            $(function () {
                 $.scrollify({
-                    section:"section",
-                    scrollbars:false,
+                    section: "section",
+                    scrollbars: false,
                     scrollSpeed: 1100,
-                    before:function(i,panels) {
+                    before: function (i, panels) {
 
                         var ref = panels[i].attr("data-section-name");
 
@@ -24,12 +26,12 @@
 
                         $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
                     },
-                    afterRender:function() {
+                    afterRender: function () {
                         var pagination = "<ul class=\"pagination\">";
                         var activeClass = "";
-                        $(".panel").each(function(i) {
+                        $(".panel").each(function (i) {
                             activeClass = "";
-                            if(i===$.scrollify.currentIndex()) {
+                            if (i === $.scrollify.currentIndex()) {
                                 activeClass = "active";
                             }
                             pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
@@ -38,18 +40,15 @@
                         pagination += "</ul>";
 
                         $(".home").append(pagination);
-                        $(".pagination a").on("click",$.scrollify.move);
+                        $(".pagination a").on("click", $.scrollify.move);
                     }
                 });
-            });
-        </script>
+            });        </script>
 
     </head>
 
     <!-- Carousel-->
     <section name="home">
-
-
 
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
@@ -66,79 +65,56 @@
             </div>
         </div>
         <div>
+            {{--Nome/pequena descrição do site--}}
             <div class="center tt">
-                <h1>Nome do lar</h1>
-                <h3>Pequena descrição do lar</h3>
+                <h1>Lar da boa esperança</h1>
+                <h3>Lar de idodos</h3>
             </div>
         </div>
     </section>
     <section name="desc">
         <!-- Inicio da 1 pagina--> <br><br><br> <br> <br> <br>
-        <div class="container-fluid">
+        <center>
+            <div class="container-fluid">
 
-            <div class="row">
-                <div class="col-md-2">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="imgr" src="{{ asset('img/sala.jpg') }}" alt="">
+                    </div>
 
-                    <img class="imgr" src="{{ asset('img/sala.png') }}" alt="">
-                </div>
-                <div class="col-md-10">
-                    <div class=" container-fluid textaa">
-                        <p class="pp">asdasdasdasdasdasdadabr <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada
-                        </p>
+                    <div class="col-md-10">
+                        <div class="textaa">
+                            <p class="pp h1">A nossa sala acolhedora para reunir os nossos utentes</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="textaa">
+                            <p class="pp h1">A nossa cantina com comidas deliciosas para o gosto de todos</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
 
-            <div class="row">
-                <div class="col-md-10">
-                    <div class="textaa">
-                        <p class="pp">asdasdasdasdasdasdadabr <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada
-                        </p>
+                        <img class="imgr" src="{{ asset('img/cantina.jpg') }}" alt="">
                     </div>
                 </div>
-                <div class="col-md-2">
+                <br>
+                <div class="row">
 
-                    <img class="imgr" src="{{ asset('img/sala.png') }}" alt="">
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-md-2">
-                    <img class="imgr" src="{{ asset('img/sala.png') }}" alt="">
-                </div>
-                <div class="col-md-10">
-                    <div class="textaa">
-                        <p class="pp">asdasdasdasdasdasdadabr <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada <br>
-                            asdasdasdasdasdasdada
-                        </p>
+                    <div class="col-md-2">
+                        <img class="imgr" src="{{ asset('img/quarto.jpg') }}" alt="">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="textaa">
+                            <p class="pp h1">Os nossos quartos aconchegantes para todo o tipo de utentes</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
+        </center>
     </section>
     <section name="cc">
         <br><br><br>
@@ -155,42 +131,44 @@
                     </div>
                 </div>
                 <div class="col">
-                    <iframe class="mapb" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12399.3137218655!2d-8.803214950000001!3d39.019227099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2spt!4v1583247726960!5m2!1spt-PT!2spt" width="600" height="450" frameborder="0" style="border:10px;" allowfullscreen=""></iframe>
+                    <iframe class="mapb"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12399.3137218655!2d-8.803214950000001!3d39.019227099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2spt!4v1583247726960!5m2!1spt-PT!2spt"
+                            width="600" height="450" frameborder="0" style="border:10px;" allowfullscreen=""></iframe>
                 </div>
             </div>
 
             <div class="row">
                 <!--<div class="col-7" style="background-color: white">-->
 
-                    <div class="formc">
-                        <form method="post" action="/send">
-                            @csrf
-                            <div class="form-group">
-                                <label for="name">Nome</label>
-                                <input class="form-control" type="text" name="name" >
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input class="form-control" type="email" name="email" >
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Contacto</label>
-                                <input class="form-control" type="text" name="subject" >
-                            </div>
-                            <div class="form-group">
-                                <label for="msg">Mensagem</label>
-                                <textarea class="form-control" name="msg"></textarea>
-                            </div>
-                            <br>
-                            <button type="submit" class="btn btn-outline-success" name="send_message_btn">Enviar</button>
-                        </form>
-                    </div>
-
+                <div class="formc">
+                    <form method="post" action="/send">
+                        @csrf
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input class="form-control" type="text" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-control" type="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Contacto</label>
+                            <input class="form-control" type="text" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="msg">Mensagem</label>
+                            <textarea class="form-control" name="msg"></textarea>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-outline-success" name="send_message_btn">Enviar</button>
+                    </form>
                 </div>
-                <div class="col">
 
-                </div>
             </div>
+            <div class="col">
+
+            </div>
+        </div>
         </div>
         <br>
     </section>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Estado;
 use App\Utente;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -15,9 +16,9 @@ class UtenteController extends Controller
      */
     public function index()
     {
-        return view('utente.index',[
-            'Utente' => Utente::orderBy('id')->paginate(10)
-        ]);
+        $utente = Utente::select()->get();
+        $estado = Estado::select()->get();
+        return view('utente.index')->with(compact('utente','estado'));
     }
 
     public function pesquisar(Request $request)
@@ -42,7 +43,9 @@ class UtenteController extends Controller
      */
     public function create()
     {
-        return view("utente.create");
+
+        $estado = Estado::select()->get();
+        return view('utente.create')->with(compact('estado'));
     }
 
     /**
@@ -59,6 +62,7 @@ class UtenteController extends Controller
             'morada' => 'required',
             'codPost' => 'required',
             'contactos' => 'required',
+            'idestado' => 'required',
           ]);
 
           $data = $request->all();
@@ -68,6 +72,8 @@ class UtenteController extends Controller
           $utt->Morada = $data['morada'];
           $utt->CodPost = $data['codPost'];
           $utt->Contactos = $data['contactos'];
+          $utt->idestado = $data['idestado'];
+
 
           $utt->save();
           return Redirect('/utente')->with('fm_success','Utente adicionado com sucesso!!');

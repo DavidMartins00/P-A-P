@@ -20,10 +20,13 @@
 <br>
     <br>
     <center>
-    @forelse ($Utente as $utt)
+    @forelse ($utente as $utt)
         <div class="centercr">
             <p>Id: {{$utt->Id}}</p>
             <p>Nome: {{$utt->Nome}}</p>
+            <p>Estado: {{$utt->estado['nome']}}</p>
+
+
             <div class="row">
                 <div class="col">
                     <a href="/utente/{{$utt->Id}}/edit" style="margin:1px" class="btn btn-outline-warning  btt">Editar</a>

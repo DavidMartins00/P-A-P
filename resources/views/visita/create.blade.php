@@ -22,7 +22,6 @@
                         <label class="col-md-4 control-label" for="textinput">Funcionário</label>
                         <div class="col-md-4 txta">
                             <select name="IdFuncionario" id="IdFuncionario">
-                                utente
                                 @foreach ($users as $item)
                                 <option value="{{$item->id}}">{{$item->name}}</option>
                                 @endforeach

@@ -81,6 +81,18 @@
                      @enderror
                 <!-------------------->
 
+                    <!-- Nome input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="idestado">Estado</label>
+                        <div class="col-md-4 txta">
+                            <select class="custom-select" name="idestado" id="idestado">
+                                @foreach ($estado as $item)
+                                    <option value="{{$item->id}}">{{$item->nome}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                <!-------------------->
 
                 <div class="form-group">
                   <button type="submit" class="btn btn-outline-dark btt">Adicionar</button>

@@ -1,11 +1,11 @@
 @extends('layouts/app')
-@section('content') 
+@section('content')
 
 <div class="back">
     <br>
-    <center>                  
-        <div class="centercr">     
-            <h3>Nome: {{$utn->Nome}}</h3>
+    <center>
+        <div class="centercr">
+        <h3>Nome: {{$utn->Nome}}</h3>
         <p>Data de Nascimento: {{$utn->DtNasc}}</p>
         <p>Morada: {{$utn->Morada}}</p>
         <p>Codigo Postal: {{$utn->CodPost}}</p>

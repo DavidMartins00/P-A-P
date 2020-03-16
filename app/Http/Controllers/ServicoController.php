@@ -28,7 +28,6 @@ class ServicoController extends Controller
         ->orwhere('categoria','like','%'.$pesq.'%')
         ->orwhere('servico','like','%'.$pesq.'%')
         ->get();
-
         return view('servico.index',['servico' => $res]);
     }
 

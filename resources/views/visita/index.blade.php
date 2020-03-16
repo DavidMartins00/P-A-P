@@ -48,7 +48,7 @@
             <p>Id: {{$vis->id}}</p>
             <p>Utente: {{$vis->utente->Nome}}</p>
             <p>Funcionário: {{$vis->user->name}}</p>
-            <p>Serviços:</p>
+            <p>Serviço:</p>
             <div class="card w-90 text cardy">
                 {{$vis->ServicosV}}
             </div>

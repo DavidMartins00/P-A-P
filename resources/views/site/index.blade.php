@@ -122,7 +122,9 @@
             <div class="row">
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="{{ asset('img/ex1.png') }}" class="card-img-top" alt="...">
+                        <center>
+                        <img src="{{ asset('img/support.png') }}" class="card-img-top" alt="..." style="width: 150px; height:auto">
+                        </center>
                         <div class="card-body">
                             <h5 class="card-title">Departamento</h5>
                             <p class="card-text">Nº Telefone: 123456789 <br> Nº Telefone: 123456789</p>
@@ -132,7 +134,7 @@
                 </div>
                 <div class="col">
                     <iframe class="mapb"
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12399.3137218655!2d-8.803214950000001!3d39.019227099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2spt!4v1583247726960!5m2!1spt-PT!2spt"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60808.862742263394!2d-8.908793278827932!3d38.9035869669984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDUzJzU4LjMiTiA4wrA1Mic0Ni41Ilc!5e0!3m2!1spt-PT!2spt!4v1584393105454!5m2!1spt-PT!2spt"
                             width="600" height="450" frameborder="0" style="border:10px;" allowfullscreen=""></iframe>
                 </div>
             </div>

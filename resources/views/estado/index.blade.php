@@ -3,6 +3,7 @@
 <div class="container-fluid" style="background-color:blue">
 @section('content')
 <div class="back">
+    <a class="btn btn-outline-dark btnc" href="/m">Voltar</a>
 
     <br>
     <div class="centercr">
@@ -45,7 +46,9 @@
         </tr>
     @endforelse
     </center>
+
 <br>
 </div>
+
 @endsection
 </div>

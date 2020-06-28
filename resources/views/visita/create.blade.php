@@ -9,12 +9,18 @@
                 <fieldset>
 
                     <!-- Form Name -->
-                    <legend>Adicionar</legend>
+                    <legend>Adicionar Visita</legend>
 
                     <!-- Nome input-->
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="textinput">Serviço</label>
-                        <textarea class="txta" block id="ServicosV" name="ServicosV" cols="50" rows="5"></textarea>
+                        <div class="col-md-4 txta">
+                            <select name="ServicosV" id="ServicosV">
+                                @foreach ($servico as $item)
+                                    <option value="{{$item->categoria}} -- {{$item->servico}}">{{$item->servico}}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
                     <!-------------------->
 

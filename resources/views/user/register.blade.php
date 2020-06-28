@@ -9,13 +9,13 @@
                 <fieldset>
 
                 <!-- Form Name -->
-                <legend>Adicionar</legend>
+                <legend>Adicionar Utilizador</legend>
 
                 <!-- Nome input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="textinput">Nome</label>
                   <div class="col-md-4">
-                  <input id="name" name="name" type="text" class="form-control input-md @error('name') is-invalid @enderror">
+                  <input id="name" name="name" type="text" class="form-control @error('name') is-invalid @enderror">
                   </div>
                 </div>
                     @error('name')

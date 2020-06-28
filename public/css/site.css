@@ -43,6 +43,7 @@
     border-radius: 15px;
     background-color:#D98943;
     color:white;
+
 }
 
 .fs{
@@ -78,7 +79,6 @@
 }
 
 .textaa{
-    background-color: #afffac;
     border-radius: 5px;
     height: 200px;
     display: flex;
@@ -98,8 +98,8 @@
 .formc{
     position: relative;
     margin: auto;
-    top: -100px;
-    left: -300px;
+    top: -200px;
+    left: -29%;
     width: 450px;
     height: auto;
     padding: 10px;
@@ -108,6 +108,38 @@
     background-color:white;
     border-radius: 15px;
     background-color: white;
+}
+
+.form-control {
+    width: 200%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -45%;
+}
+
+.form-controll {
+    display: block;
+    width: 100%;
+    height: calc(1.6em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btnc{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
 }
 
 /* Color Theme Swatches in Hex */

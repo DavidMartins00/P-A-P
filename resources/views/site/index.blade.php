@@ -5,6 +5,15 @@
             body {
                 background-color: #ffffff;
             }
+
+            .form-control {
+                width: 100%;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: -45%;
+            }
         </style>
 
 
@@ -43,7 +52,9 @@
                         $(".pagination a").on("click", $.scrollify.move);
                     }
                 });
-            });        </script>
+            });
+
+        </script>
 
     </head>
 
@@ -54,27 +65,26 @@
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style="background-image: url('{{ asset('img/ex1.png') }}')">
+                <div class="carousel-item active" style="background-image: url('{{ asset('img/cr1.jpg') }}')">
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('{{ asset('img/ex2.png') }}')">
-                </div>
-                <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('{{ asset('img/ex3.png') }}')">
+                <div class="carousel-item" style="background-image: url('{{ asset('img/cr2.png') }}')">
                 </div>
             </div>
         </div>
         <div>
             {{--Nome/pequena descrição do site--}}
-            <div class="center tt">
-                <h1>Lar da boa esperança</h1>
-                <h3>Lar de idodos</h3>
+            <div style="text-align: center;">
+                <div class="center tt">
+                    <h1>Lar da boa esperança</h1>
+                    <h3>Lar de idodos</h3>
+                </div>
             </div>
         </div>
     </section>
     <section name="desc">
         <!-- Inicio da 1 pagina--> <br><br><br> <br> <br> <br>
-        <center>
+        <div style="text-align: center;">
             <div class="container-fluid">
 
                 <div class="row">
@@ -114,63 +124,59 @@
                 </div>
 
             </div>
-        </center>
+        </div>
     </section>
     <section name="cc">
         <br><br><br>
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <center>
-                        <img src="{{ asset('img/support.png') }}" class="card-img-top" alt="..." style="width: 150px; height:auto">
-                        </center>
-                        <div class="card-body">
-                            <h5 class="card-title">Departamento</h5>
-                            <p class="card-text">Nº Telefone: 123456789 <br> Nº Telefone: 123456789</p>
-                            <b>Segunda a Sexta: 9h-18h</b>
+                <div class="col-6">
+                    <div class="card" style="width: 83%;">
+                        <div style="text-align: center;">
+                            <img src="{{ asset('img/support.png') }}" class="card-img-top" alt="..."
+                                 style="width: 150px; height:auto">
+                        </div>
+                        <div style="text-align: center;">
+                            <div class="card-body">
+                                <h5 class="card-title">Departamento</h5>
+                                <p class="card-text">Nº Telefone: 123456789 <br> Nº Telefone: 123456789</p>
+                                <b>Segunda a Sexta: 9h-18h</b>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-6">
                     <iframe class="mapb"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60808.862742263394!2d-8.908793278827932!3d38.9035869669984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDUzJzU4LjMiTiA4wrA1Mic0Ni41Ilc!5e0!3m2!1spt-PT!2spt!4v1584393105454!5m2!1spt-PT!2spt"
-                            width="600" height="450" frameborder="0" style="border:10px;" allowfullscreen=""></iframe>
+                            width="800" height="600" frameborder="0" style="border:10px;" allowfullscreen=""></iframe>
                 </div>
             </div>
 
             <div class="row">
-                <!--<div class="col-7" style="background-color: white">-->
-
                 <div class="formc">
                     <form method="post" action="/send">
                         @csrf
                         <div class="form-group">
                             <label for="name">Nome</label>
-                            <input class="form-control" type="text" name="name">
+                            <input class="form-controll" type="text" name="name">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input class="form-control" type="email" name="email">
+                            <input class="form-controll" type="email" name="email">
                         </div>
                         <div class="form-group">
                             <label for="subject">Contacto</label>
-                            <input class="form-control" type="text" name="subject">
+                            <input class="form-controll" type="text" name="subject">
                         </div>
                         <div class="form-group">
                             <label for="msg">Mensagem</label>
-                            <textarea class="form-control" name="msg"></textarea>
+                            <textarea class="form-controll" name="msg"></textarea>
                         </div>
                         <br>
                         <button type="submit" class="btn btn-outline-success" name="send_message_btn">Enviar</button>
                     </form>
                 </div>
-
             </div>
-            <div class="col">
-
-            </div>
-        </div>
         </div>
         <br>
     </section>

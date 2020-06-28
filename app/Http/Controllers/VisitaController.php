@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Servico;
 use App\User;
 use App\Utente;
 use App\Visita;
@@ -62,7 +63,8 @@ class VisitaController extends Controller
     {
         $users = User::select()->get();
         $utentes = Utente::select()->get();
-         return view('visita.create')->with(compact('users','utentes'));
+        $servico = Servico::select()->get();
+        return view('visita.create')->with(compact('users','utentes','servico'));
     }
 
     /**

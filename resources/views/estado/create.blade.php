@@ -8,7 +8,7 @@
                 <fieldset>
 
                 <!-- Form Name -->
-                <legend>Adicionar</legend>
+                <legend>Adicionar Estado</legend>
 
                 <!-- Nome input-->
                 <div class="form-group">

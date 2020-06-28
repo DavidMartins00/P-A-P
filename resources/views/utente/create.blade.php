@@ -9,7 +9,7 @@
                 <fieldset>
 
                 <!-- Form Name -->
-                <legend>Adicionar</legend>
+                <legend>Adicionar Utente</legend>
 
                 <!-- Nome input-->
                 <div class="form-group">

@@ -1,4 +1,4 @@
-@extends('layouts/app')
+ @extends('layouts/app')
 @section('content')
 <div class="back">
     <br>
@@ -7,7 +7,7 @@
     <center>
             <!-- Form Name -->
 
-            <legend style="color:#2C2F33">Utilizadores</legend>
+            <legend style="color:#2C2F33">Funcionarios</legend>
 
 
             <!-- Butao adicionar-->
@@ -61,7 +61,7 @@
 
 </div>
 <br>
-    
+
                              <!-- Serviços -->
 <div class="centercr">
     <center>

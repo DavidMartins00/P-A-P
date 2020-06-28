@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="back">
-
+    <a class="btn btn-outline-dark btnc" href="/m">Voltar</a>
     <br>
         <div class="centercr">
             <center>

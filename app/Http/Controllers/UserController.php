@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\role_user;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {

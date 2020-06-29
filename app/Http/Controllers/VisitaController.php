@@ -31,11 +31,12 @@ class VisitaController extends Controller
         $urs = $request->get('users');
         $utt = $request->get('utente');
 
-        $res = Visita::where('id','like','%'.$pesq.'%')->get();
-        // ->orwhere('IdUtente','like','%'.$utt.'%')
-        // ->orwhere('IdFuncionario','like','%'.$urs.'%')
-        // ->orwhere('ServicosV','like','%'.$pesq.'%')
-        //
+        $res = Visita::where('id','like','%'.$pesq.'%')
+         //->orwhere('IdUtente','like','%'.$utt.'%')
+         //->orwhere('IdFuncionario','like','%'.$urs.'%')
+         ->orwhere('ServicosV','like','%'.$pesq.'%')
+         ->get();
+
 
         if($urs != 0){
         $res = Visita::whereHas('user', function($q) use($urs){

@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
@@ -19,7 +18,7 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    use AuthUser;
 
     /**
      * Where to redirect users after login.

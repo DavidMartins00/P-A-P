@@ -8,9 +8,8 @@
     <div class="centercr">
         <center>
             <form action="/pvis" method="GET">
-                <h3>Pequisar</h3>
+                <h3>Pesquisar</h3>
                 <div class="col-md-4">
-                    <input type="text" name="pesq" class="form-control" placeholder="Pesquisar">
                     <br>
                     <div class="row">
                         <div class="container">

@@ -7,7 +7,7 @@
         <div class="centercr">
             <center>
             <form action="/pusers" method="GET">
-            <h3>Pequisar</h3>
+            <h3>Pesquisar</h3>
             <div class="col-md-4">
                 <div class="col">
             <input type="text" name="pesq" class="form-control" placeholder="Pesquisar">
